@@ -1,4 +1,6 @@
-### Hi there 👋
+### Hahaha bio go brrrrrrrr 👋
+![](https://i.kym-cdn.com/photos/images/facebook/001/800/089/30b.png)
+
 
 <!--
 **Stormix/Stormix** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
