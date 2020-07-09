@@ -1,10 +1,17 @@
 ### Hahaha bio go brrrrrrrr 👋
 ![](https://i.kym-cdn.com/photos/images/facebook/001/800/089/30b.png)
 
+### To know a little more about me...
+
+- ⚡ Personal Site [Stormix.co](http://stormix.co/)
+- 🐦 Twitter: [@Stormix_co](https://twitter.com/stormix_co)
+- 👥 LinkedIn [/anasmazouni](https://linkedin.com/in/anasmazouni)
+- 👨‍💻 Blogs/Writings: [Personal Blog](https://blog.anasmazouni.dev/)
 
 <!--
 **Stormix/Stormix** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
+I am a 21 year old, mostly self taught, software engineer from Morocco. I'm passionate about technology, communities, and everything in-between. I've worked with tools ranging from PHP / Laravel, JS/TS, Python, C++ and most web Frontend Technologies (VueJs, React ...) . I love to learn and contribute in any and every possible way. 
 Here are some ideas to get you started:
 
 - 🔭 I’m currently working on ...
