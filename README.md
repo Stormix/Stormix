@@ -1,5 +1,5 @@
 ### Hahaha bio go brrrrrrrr 👋
-![](https://i.kym-cdn.com/photos/images/facebook/001/800/089/30b.png)
+![](https://memes.stormix.co/send/memes)
 
 ### To know a little more about me...
 
