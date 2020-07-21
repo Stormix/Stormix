@@ -1,4 +1,4 @@
-### Hahaha bio go brrrrrrrr 👋
+### Memes are supplied by [Stormix/memes](https://github.com/Stormix/memes/)
 ![](https://memes.stormix.co/send/memes)
 
 ### To know a little more about me...
