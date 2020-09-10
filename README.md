@@ -9,7 +9,13 @@ I am a 22 year old, mostly self taught, software engineer born in Morocco and cu
 - 👥 LinkedIn [/anasmazouni](https://linkedin.com/in/anasmazouni)
 - 👨‍💻 Blogs/Writings: [Personal Blog](https://blog.anasmazouni.dev/)
 
-### Random memes supplied by [Stormix/memes](https://github.com/Stormix/memes/)
+### Awesome Stats
+
+![Github Stats](https://github-readme-stats.vercel.app/api?username=stormix&count_private=true&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=stormix&hide=TeX&layout=compact&theme=radical)
+
+### Random memes 
+#### supplied by [Stormix/memes](https://github.com/Stormix/memes/)
 ![](https://memes.stormix.co/send/memes)
 
 
