@@ -1,6 +1,6 @@
 ## Hello World!
 
-I am a 22 year old, mostly self taught, software engineer born in Morocco and currently living in France. I'm passionate about sofware engineering, robotics, and everything in-between. I've worked with tools ranging from PHP / Laravel, JS/TS, Python, C++ and most web Frontend Technologies (VueJs, React ...) . I love to learn and contribute in any and every possible way. 
+I am a 22 year old, mostly self taught, software engineer born in Morocco and currently living in France. I'm passionate about sofware engineering, robotics, and everything in-between. I've worked with tools ranging from PHP / Laravel, JS/TS, Python, C++, Java :( and most web Frontend Technologies (VueJs, React ...) . I love to learn and contribute in any and every possible way. 
 
 ### To know a little more about me...
 
