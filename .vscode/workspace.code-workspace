@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+  ],
+  "settings": {
+    "vetur.experimental.templateInterpolationService": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "css.validate": false, // Disable css built-in lint
+    "stylelint.enable": true, // Enable sytlelint
+    "editor.formatOnSave": false,
+    "vetur.validation.template": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+  }
+}
