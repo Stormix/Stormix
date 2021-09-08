@@ -11,6 +11,9 @@ I am a 22 year old, mostly self taught, software engineer born in Morocco and cu
 
 ### Awesome Stats
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=stormix&count_private=true&show_icons=true&theme=radical)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=stormix&hide=TeX&layout=compact&theme=radical)
 
