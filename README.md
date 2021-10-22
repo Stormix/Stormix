@@ -15,11 +15,11 @@ I am a 22 year old, mostly self taught, software engineer born in Morocco and cu
 
 <!--START_SECTION:waka-->
 ```text
-TypeScript   12 hrs 53 mins  █████████████████░░░░░░░░   67.98 % 
-Vue.js       2 hrs 43 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.33 % 
-Docker       54 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   04.81 % 
-JSON         35 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.14 % 
-JavaScript   26 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.37 % 
+TypeScript   12 hrs 2 mins   ████████████████▒░░░░░░░░   64.78 % 
+Vue.js       2 hrs 43 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.63 % 
+JSON         55 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   04.98 % 
+Docker       54 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   04.92 % 
+Other        28 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.57 % 
 ```
 <!--END_SECTION:waka-->
 
