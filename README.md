@@ -16,10 +16,10 @@ I am a 24 year old, mostly self taught, software engineer, currently living in F
 <!--START_SECTION:waka-->
 
 ```text
-TypeScript   18 hrs          ██████████████████████▒░░   89.75 %
-GraphQL      54 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.52 %
-JSON         36 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.07 %
-Other        16 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.41 %
+TypeScript   17 hrs 51 mins  █████████████████████▓░░░   86.39 %
+GraphQL      1 hr 27 mins    █▓░░░░░░░░░░░░░░░░░░░░░░░   07.09 %
+JSON         38 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.10 %
+Other        20 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.63 %
 ```
 
 <!--END_SECTION:waka-->
