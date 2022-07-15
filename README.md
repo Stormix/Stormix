@@ -16,12 +16,12 @@ I am a 24 year old, mostly self taught, software engineer, currently living in F
 <!--START_SECTION:waka-->
 
 ```text
-TypeScript   3 hrs           ███████████░░░░░░░░░░░░░░   44.15 %
-JSON         57 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.98 %
-YAML         46 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.52 %
-Docker       45 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   11.25 %
-Markdown     41 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.23 %
-Bash         18 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.54 %
+JSON         51 mins         ██████▒░░░░░░░░░░░░░░░░░░   25.87 %
+YAML         45 mins         █████▓░░░░░░░░░░░░░░░░░░░   22.79 %
+Markdown     40 mins         █████░░░░░░░░░░░░░░░░░░░░   20.44 %
+Docker       23 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.88 %
+Bash         15 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.96 %
+Other        11 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.64 %
 ```
 
 <!--END_SECTION:waka-->
