@@ -34,7 +34,7 @@ const Header = () => {
         <nav className="flex flex-row justify-center gap-4">
           {paths.map(({ name, href }) => (
             <Link key={href} href={href}>
-              <a className="lowercase hover:text-primary-dark">{`.${name}()`}</a>
+              <a className="lowercase hover:text-primary">{`.${name}()`}</a>
             </Link>
           ))}
         </nav>
