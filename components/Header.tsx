@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <div className="container grid items-center grid-cols-4 py-8 mx-auto">
-      <div className="flex justify-center col-span-1">
+      <div className="flex col-span-1">
         <Link href="/" className="">
           Logo
           {/* <Image src="/logo-white.png" width={105} height={30} alt="" className="text-white" /> */}
@@ -40,7 +40,7 @@ const Header = () => {
         </nav>
       </div>
 
-      <div className="flex justify-center col-span-1 ">
+      <div className="flex justify-end col-span-1">
         <LanguageSwitcher />
       </div>
     </div>

@@ -1,7 +1,16 @@
 import type { NextPage } from 'next';
+import Email from '../components/Email';
+import Hero from '../components/Hero';
+import Socials from '../components/Socials';
 
 const Home: NextPage = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="flex flex-row items-end h-full">
+      <Socials />
+      <Hero />
+      <Email />
+    </div>
+  );
 };
 
 export default Home;

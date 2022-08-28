@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import "hero";
+@import "scroll-down";
+
 body {
   width: 100%;
   height: 100vh;
