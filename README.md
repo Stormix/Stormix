@@ -16,12 +16,10 @@ I am a 24 year old, mostly self taught, software engineer, currently living in F
 <!--START_SECTION:waka-->
 
 ```text
-Blade Template   14 mins         █████░░░░░░░░░░░░░░░░░░░░   19.94 %
-Bash             12 mins         ████▒░░░░░░░░░░░░░░░░░░░░   17.49 %
-INI              9 mins          ███▒░░░░░░░░░░░░░░░░░░░░░   13.72 %
-JavaScript       9 mins          ███░░░░░░░░░░░░░░░░░░░░░░   12.49 %
-Vue.js           8 mins          ███░░░░░░░░░░░░░░░░░░░░░░   12.31 %
-SQL              6 mins          ██▒░░░░░░░░░░░░░░░░░░░░░░   09.24 %
+Bash         24 mins         ████████████░░░░░░░░░░░░░   47.80 %
+INI          9 mins          █████░░░░░░░░░░░░░░░░░░░░   19.40 %
+SQL          6 mins          ███▒░░░░░░░░░░░░░░░░░░░░░   13.06 %
+Other        5 mins          ██▓░░░░░░░░░░░░░░░░░░░░░░   10.98 %
 ```
 
 <!--END_SECTION:waka-->
