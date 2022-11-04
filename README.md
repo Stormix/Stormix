@@ -16,7 +16,7 @@ I am a 24 year old, mostly self taught, software engineer, currently living in F
 <!--START_SECTION:waka-->
 
 ```text
-Other            2 hrs 15 mins   ██████████████░░░░░░░░░░░   56.41 %
+Other        2 hrs 15 mins   █████████████▓░░░░░░░░░░░   54.34 %
 ```
 
 <!--END_SECTION:waka-->
