@@ -16,11 +16,11 @@ I am a 24 year old, mostly self taught, software engineer, currently living in F
 <!--START_SECTION:waka-->
 
 ```text
-Lua          1 hr 11 mins    ███████████████▒░░░░░░░░░   61.24 %
-INI          25 mins         █████▒░░░░░░░░░░░░░░░░░░░   21.92 %
-Markdown     15 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.39 %
-SQL          2 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.39 %
-Other        1 min           ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.88 %
+TypeScript   2 hrs 16 mins   ████████████▒░░░░░░░░░░░░   49.41 %
+Lua          1 hr 11 mins    ██████▒░░░░░░░░░░░░░░░░░░   25.97 %
+INI          25 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.30 %
+Markdown     19 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.94 %
+Other        8 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.13 %
 ```
 
 <!--END_SECTION:waka-->
