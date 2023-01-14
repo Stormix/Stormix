@@ -13,7 +13,7 @@ const WorkInProgress: React.FC = () => {
       >
         @Stormix_co
       </a>
-      <span>stay updated...</span>
+      <span>to stay updated...</span>
     </div>
   );
 };
