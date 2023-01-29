@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Button from './Button';
 import ScrollDown from './ScrollDown';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col h-screen -mt-24">
       <div className="flex flex-col w-3/6 m-auto">
@@ -22,8 +24,8 @@ const Hero: React.FC = () => {
           everything in-between.{' '}
         </div>
 
-        <div className="flex flex-row items-center gap-8 my-4">
-          <Button>Download Resume</Button>
+        <div className="flex flex-row items-center gap-8 mt-24">
+          <Button>{t('download-resume')}</Button>
         </div>
         <ScrollDown />
       </div>

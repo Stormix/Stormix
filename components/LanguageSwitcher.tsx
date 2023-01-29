@@ -1,12 +1,15 @@
 import { GlobeAltIcon } from '@heroicons/react/solid';
 import { cl } from 'dynamic-class-list';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const LanguageSwitcher = () => {
-  const [language, setLanguage] = useState('EN-US');
-  const [languages, setLanguages] = useState(['AR-MA', 'EN-US', 'FR-FR']);
+  const { i18n } = useTranslation();
+  const i18nLanguages = ((i18n.languages as string[]) ?? []).sort((a, b) => a.localeCompare(b));
 
-  const roll = (array: string[], direction: number, steps: number) => {
+  const [languages, setLanguages] = useState(() => i18nLanguages);
+
+  const roll = (array: readonly string[], direction: number, steps: number) => {
     const newArray: string[] = [];
     for (let i = 0; i < array.length; i++) {
       const temp = i + steps * direction;
@@ -17,13 +20,18 @@ const LanguageSwitcher = () => {
   };
 
   const onSelectLanguage = (language: string) => {
-    const lIndex = languages.indexOf(language);
-    const middleIndex = Math.floor(languages.length / 2);
-    const newLanguages: string[] = roll(languages, lIndex - middleIndex, 1);
+    const languageIdx = languages.indexOf(language);
+    const middleIdx = Math.floor(languages.length / 2);
+    const newLanguages: string[] = roll(languages, languageIdx - middleIdx, 1);
 
     setLanguages(newLanguages);
-    setLanguage(language);
+    i18n.changeLanguage(language);
   };
+
+  // Set body dir based on language
+  useEffect(() => {
+    document.body.dir = i18n.language == 'ar-ma' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
 
   return (
     <div className="flex flex-row items-center justify-center gap-2">
@@ -32,8 +40,9 @@ const LanguageSwitcher = () => {
       <div className="flex flex-col overflow-y-scroll no-scroll">
         {languages.map((lang) => (
           <span
-            className={cl('uppercase cursor-pointer text-secondary opacity-50', {
-              'opacity-100': language === lang,
+            className={cl('uppercase cursor-pointer text-secondary', {
+              'opacity-100': lang == i18n.language,
+              'opacity-20': lang != i18n.language,
             })}
             key={lang}
             onClick={() => onSelectLanguage(lang)}

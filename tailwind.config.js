@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Roboto Mono', 'monospace'],
+        arabic: ['Noto Kufi Arabic', 'sans-serif'],
       },
       colors: {
         'primary-dark': {
@@ -60,5 +61,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-rtl')],
 };

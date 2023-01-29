@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
+import Logo from '../public/logo.svg';
 
 const Header = () => {
   const paths = [
@@ -25,8 +26,7 @@ const Header = () => {
     <div className="container grid items-center grid-cols-4 py-8 mx-auto">
       <div className="flex col-span-1">
         <Link href="/" className="">
-          Logo
-          {/* <Image src="/logo-white.png" width={105} height={30} alt="" className="text-white" /> */}
+          <Logo height={30} fill="white" />
         </Link>
       </div>
 
