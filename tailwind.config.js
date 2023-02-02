@@ -9,7 +9,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Roboto Mono', 'monospace'],
+        sans: ['var(--primary-font)'],
         arabic: ['Noto Kufi Arabic', 'sans-serif'],
       },
       colors: {

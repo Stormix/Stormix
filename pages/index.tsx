@@ -1,18 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Email from '../components/Email';
-import Hero from '../components/Hero';
-import Socials from '../components/Socials';
+import About from '../components/sections/About';
+import Hero from '../components/sections/Hero';
+import Resume from '../components/sections/Resume';
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-row items-end h-full">
+    <div className="flex flex-col items-center">
       <Head>
         <title>Anas Mazouni | Stormix</title>
       </Head>
-      <Socials />
       <Hero />
-      <Email />
+      <About />
+      <Resume />
     </div>
   );
 };

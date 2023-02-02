@@ -1,7 +1,7 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import Button from './Button';
-import ScrollDown from './ScrollDown';
+import { Trans, useTranslation } from 'react-i18next';
+import Button from '../Button';
+import ScrollDown from '../ScrollDown';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -10,11 +10,13 @@ const Hero: React.FC = () => {
       <div className="flex flex-col w-3/6 m-auto">
         <div className="flex flex-row text-secondary">
           <div className="w-8 border-t border-secondary bottom-[-12px] relative" />
-          <span className="ml-2">Hello World</span>
+          <span className="ml-2">{t('hero.intro')}</span>
         </div>
         <div className="mt-2">
           <p className="mb-4 text-5xl">
-            I&apos;m <span className="text-primary">Anas</span> Mazouni
+            <Trans i18nKey={'hero.title'}>
+              I&apos;m <span className="text-primary">Anas</span> Mazouni
+            </Trans>
           </p>
           <p className="text-4xl font-bold">And I like to build stuff</p>
         </div>

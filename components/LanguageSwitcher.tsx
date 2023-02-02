@@ -30,7 +30,13 @@ const LanguageSwitcher = () => {
 
   // Set body dir based on language
   useEffect(() => {
+    // Change language direction
     document.body.dir = i18n.language == 'ar-ma' ? 'rtl' : 'ltr';
+    // Change primary font based on language
+    document.documentElement.style.setProperty(
+      '--primary-font',
+      i18n.language == 'ar-ma' ? '"Noto Kufi Arabic", sans-serif' : '"Roboto Mono", monospace',
+    );
   }, [i18n.language]);
 
   return (
