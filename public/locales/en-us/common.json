@@ -1,0 +1,24 @@
+{
+  "download-resume": "Download Resume",
+  "hero": {
+    "intro": "Hi",
+    "title": "I'm <1>Anas</1> Mazouni"
+  },
+  "resume": {
+    "resume": {
+      "title": ".resume()"
+    },
+    "workExperience": {
+      "title": ".workExperience()"
+    },
+    "timeline": {
+      "title": ".timeline()"
+    }
+  },
+  "nav": {
+    "about": ".about()",
+    "resume": ".resume()",
+    "projects": ".projects()",
+    "contact": ".contact()"
+  }
+}

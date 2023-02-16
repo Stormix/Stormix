@@ -1,0 +1,24 @@
+{
+  "download-resume": "Télécharger le CV",
+  "hero": {
+    "intro": "Salut",
+    "title": "Je m'appelle <1>Anas</1> Mazouni"
+  },
+  "resume": {
+    "resume": {
+      "title": ".resume()"
+    },
+    "experience": {
+      "title": ".workExperience()"
+    },
+    "timeline": {
+      "title": ".timeline()"
+    }
+  },
+  "nav": {
+    "about": ".about()",
+    "resume": ".resume()",
+    "projects": ".projects()",
+    "contact": ".contact()"
+  }
+}
