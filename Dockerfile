@@ -12,6 +12,6 @@ ADD . /usr/src/app
 
 RUN yarn build
 
-CMD [ "yarn", "start" ]
+CMD [ "yarn", "preview" ]
 
 EXPOSE ${PORT}
