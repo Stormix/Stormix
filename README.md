@@ -22,7 +22,6 @@ I am a 24 year old, mostly self taught, software engineer, currently living in F
 <a href="https://stackoverflow.com/users/3370660" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="3370660" height="30" width="40" /></a>
 </p>
 
-## Awesome Stats
 
 ### :bar_chart: Weekly development breakdown
 
@@ -42,11 +41,12 @@ Other        21 mins         ▓░░░░░░░░░░░░░░░░
 
 ## General github stats
 
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=stormix&theme=radical" alt="stormix" /></p>
+
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=stormix&show_icons=true&locale=en&layout=compact&theme=radical" alt="stormix" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=stormix&show_icons=true&locale=en&theme=radical" alt="stormix" /></p>
+<p>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=stormix&show_icons=true&locale=en&theme=radical" alt="stormix" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=stormix&theme=radical" alt="stormix" /></p>
 
 ## Random [memes](https://github.com/Stormix/memes/)
 
