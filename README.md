@@ -48,7 +48,7 @@ Other        21 mins         ▓░░░░░░░░░░░░░░░░
 <p>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=stormix&show_icons=true&locale=en&theme=radical" alt="stormix" /></p>
 
 
-## Random [memes](https://github.com/Stormix/memes/)
+<!-- ## Random [memes](https://github.com/Stormix/memes/)
 
 <details>
 <summary> show
@@ -57,3 +57,4 @@ Other        21 mins         ▓░░░░░░░░░░░░░░░░
 ![meme](https://memes.stormix.co/send/memes)
 
 </details>
+ -->
