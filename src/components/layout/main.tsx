@@ -8,7 +8,7 @@ import Header from '@/components/molecules/Header';
 const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <>
-      <div className="flex flex-col w-full bg-background">
+      <div className="flex flex-col w-full bg-background-light dark:bg-background dark:text-primary-light text-primary-dark">
         <Header />
         <main className="container flex flex-col m-auto">
           <div className="container flex flex-col w-full">

@@ -31,7 +31,7 @@ const Socials: React.FC = () => {
     },
   ];
   return (
-    <div className="flex flex-col w-4 gap-4 text-white">
+    <div className="flex flex-col w-4 gap-4">
       {socials.map((social) => (
         <a
           key={social.url}
@@ -43,7 +43,7 @@ const Socials: React.FC = () => {
           {social.icon}
         </a>
       ))}
-      <div className="h-12 ml-[5px] border-l border-white" />
+      <div className="h-12 ml-[5px] border-l dark:border-background-light border-background" />
     </div>
   );
 };

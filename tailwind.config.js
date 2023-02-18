@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
@@ -13,6 +14,19 @@ module.exports = {
         arabic: ['Noto Kufi Arabic', 'sans-serif'],
       },
       colors: {
+        'primary-light': {
+          DEFAULT: '#F8F8F8',
+          50: '#FFFFFF',
+          100: '#FFFFFF',
+          200: '#FFFFFF',
+          300: '#F8F8F8',
+          400: '#E6E6E6',
+          500: '#D4D4D4',
+          600: '#C2C2C2',
+          700: '#B1B1B1',
+          800: '#9F9F9F',
+          900: '#8D8D8D',
+        },
         'primary-dark': {
           DEFAULT: '#100F13',
           50: '#66607A',
@@ -54,6 +68,7 @@ module.exports = {
         },
         black: '#111016',
         background: '#08090A',
+        'background-light': '#F8F8F8',
       },
     },
   },

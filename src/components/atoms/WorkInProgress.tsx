@@ -2,7 +2,7 @@ import React from 'react';
 
 const WorkInProgress: React.FC = () => {
   return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-primary-dark-800 ">
+    <div className="flex items-center gap-2 px-4 py-2 dark:bg-primary-dark-800 bg-primary-light-400">
       <span>Still a work in progress. Follow me on </span>
       <a
         title="Twitter profile"

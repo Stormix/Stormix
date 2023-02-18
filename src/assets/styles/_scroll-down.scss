@@ -1,5 +1,5 @@
 .scroll-down {
-  border: 2px solid #fff;
+  @apply border-2 dark:border-background-light border-background;
   border-radius: 20px;
   bottom: 60px;
   height: 50px;
@@ -11,8 +11,8 @@
   z-index: 11;
 
   &::before {
+    @apply border-2 dark:bg-background-light bg-background;
     animation: scrollDownAnimation 2s infinite;
-    background-color: #fff;
     border-radius: 100%;
     content: '';
     height: 10px;

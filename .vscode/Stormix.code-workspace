@@ -10,6 +10,8 @@
     ],
     "i18n-ally.keystyle": "nested",
     "cSpell.words": [
+      "Centrale",
+      "École",
       "fontawesome",
       "fortawesome",
       "Kufi",
@@ -17,7 +19,8 @@
       "Lngs",
       "Noto",
       "Roboto",
-      "tailwindcss"
+      "tailwindcss",
+      "Yogalive"
     ]
   }
 }

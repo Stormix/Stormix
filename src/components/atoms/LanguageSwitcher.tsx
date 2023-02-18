@@ -1,4 +1,3 @@
-import { GlobeAltIcon } from '@heroicons/react/24/solid';
 import { cl } from 'dynamic-class-list';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -52,7 +51,6 @@ const LanguageSwitcher = () => {
   }, []);
   return (
     <div className="flex flex-row items-center justify-center gap-2">
-      <GlobeAltIcon className="w-4 h-4 text-white" />
       <div>.setLang(</div>
       <div className="flex flex-col overflow-y-scroll no-scroll">
         {languages.map((lang) => (

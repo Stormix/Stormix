@@ -22,13 +22,13 @@ const Hero: React.FC = () => {
           <p className="text-4xl font-bold">And I like to build stuff</p>
         </div>
 
-        <div className="mt-4 hero--intro">
+        <div className="hero--intro">
           I’m a <span>software engineer</span> specialized in <span>web technologies</span> with a huge passion for{' '}
           <span>automation</span> and <span>DevOps</span>. I&apos;m passionate about software engineering, robotics, and
           everything in-between.{' '}
         </div>
 
-        <div className="flex flex-row items-center gap-8 mt-16">
+        <div className="flex flex-row items-center gap-8">
           <Button>{t('download-resume')}</Button>
         </div>
         <ScrollDown />

@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@heroicons/react": "^2.0.15",
+    "date-fns": "^2.29.3",
     "dynamic-class-list": "^2.0.2",
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
@@ -24,7 +25,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.5",
-    "react-router-dom": "^6.8.1"
+    "react-router-dom": "^6.8.1",
+    "react-toggle-dark-mode": "^1.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.3",

@@ -1,9 +1,8 @@
 .hero {
   &--intro {
-    color: rgba(255, 255, 255, 0.5);
-
+    @apply dark:text-primary-light/50 text-primary-dark/50 my-6;
     span {
-      color: white;
+      @apply dark:text-primary-light text-primary-dark;
       &:hover {
         text-decoration: underline;
         cursor: pointer;

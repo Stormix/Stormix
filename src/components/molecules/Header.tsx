@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from '@/assets/logo.svg';
 import { useTranslation } from 'react-i18next';
 import WorkInProgress from '@/components/atoms/WorkInProgress';
 import useScrollTo from '@/hooks/useScrollTo';
+import DarkModeSwitch from '../atoms/DarkModeSwitch';
 
 interface Path {
   name: string;
@@ -34,12 +35,12 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="fixed w-full bg-background">
+    <div className="fixed w-full dark:bg-background bg-background-light">
       <WorkInProgress />
 
       <div className="container flex items-center py-8 mx-auto z-100">
         <div className="flex">
-          <Logo height={30} fill="white" onClick={() => scrollTo('hero')} />
+          <Logo height={30} fill="currentColor" onClick={() => scrollTo('hero')} />
         </div>
 
         <div className="flex-grow">
@@ -52,8 +53,9 @@ const Header = () => {
           </nav>
         </div>
 
-        <div className="flex justify-end">
+        <div className="flex flex-row items-center justify-end gap-4">
           <LanguageSwitcher />
+          <DarkModeSwitch />
         </div>
       </div>
     </div>
