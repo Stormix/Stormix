@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-import Button from '../atoms/Button';
-import ScrollDown from '../atoms/ScrollDown';
+import Button from '@/components/atoms/Button';
+import ScrollDown from '@/components/atoms/ScrollDown';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();

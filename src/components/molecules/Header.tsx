@@ -1,9 +1,9 @@
 import React from 'react';
-import LanguageSwitcher from '../atoms/LanguageSwitcher';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
+import LanguageSwitcher from '@/components/atoms/LanguageSwitcher';
+import { ReactComponent as Logo } from '@/assets/logo.svg';
 import { useTranslation } from 'react-i18next';
-import WorkInProgress from '../atoms/WorkInProgress';
-import useScrollTo from '../../hooks/useScrollTo';
+import WorkInProgress from '@/components/atoms/WorkInProgress';
+import useScrollTo from '@/hooks/useScrollTo';
 
 interface Path {
   name: string;

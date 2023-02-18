@@ -1,8 +1,9 @@
 import React from 'react';
-import Layout from '../components/layout/main';
-import About from '../components/organisms/About';
-import Hero from '../components/organisms/Hero';
-import Resume from '../components/organisms/Resume';
+
+import Layout from '@/components/layout/main';
+import About from '@/components/organisms/About';
+import Hero from '@/components/organisms/Hero';
+import Resume from '@/components/organisms/Resume';
 
 const Home = () => {
   return (

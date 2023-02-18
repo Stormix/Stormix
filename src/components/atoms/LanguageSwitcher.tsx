@@ -2,7 +2,7 @@ import { GlobeAltIcon } from '@heroicons/react/24/solid';
 import { cl } from 'dynamic-class-list';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Language } from '../../types/language';
+import { Language } from '@/types/language';
 import React from 'react';
 
 const LanguageSwitcher = () => {

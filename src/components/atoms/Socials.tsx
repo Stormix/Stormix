@@ -1,21 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faFacebookF,
-  faGithub,
-  faInstagram,
-  faLinkedin,
-  faStackOverflow,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Socials: React.FC = () => {
   const socials = [
-    {
-      label: 'Facebook',
-      icon: <FontAwesomeIcon icon={faFacebookF} />,
-      url: 'https://www.facebook.com/',
-    },
     {
       label: 'Twitter',
       icon: <FontAwesomeIcon icon={faTwitter} />,

@@ -1,8 +1,9 @@
 import React from 'react';
 import { FC } from 'react';
-import Email from '../atoms/Email';
-import Socials from '../atoms/Socials';
-import Header from '../molecules/Header';
+
+import Email from '@/components/atoms/Email';
+import Socials from '@/components/atoms/Socials';
+import Header from '@/components/molecules/Header';
 
 const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
