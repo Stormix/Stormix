@@ -59,7 +59,7 @@ const LanguageSwitcher = () => {
           <span
             className={cl('uppercase cursor-pointer text-primary', {
               'opacity-100': lang == i18n.language,
-              'opacity-20': lang != i18n.language,
+              'opacity-25': lang != i18n.language,
             })}
             key={lang}
             onClick={() => onSelectLanguage(lang)}

@@ -45,11 +45,17 @@ const Socials: React.FC = () => {
   return (
     <div className="flex flex-col w-4 gap-4 text-white">
       {socials.map((social) => (
-        <a key={social.url} href={social.url} target="_blank" className="" rel="noreferrer">
+        <a
+          key={social.url}
+          href={social.url}
+          target="_blank"
+          className="transition-colors hover:text-primary"
+          rel="noreferrer"
+        >
           {social.icon}
         </a>
       ))}
-      <div className="h-48 ml-[5px] border-l border-white" />
+      <div className="h-12 ml-[5px] border-l border-white" />
     </div>
   );
 };

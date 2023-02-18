@@ -39,9 +39,7 @@ const Header = () => {
 
       <div className="container flex items-center py-8 mx-auto z-100">
         <div className="flex">
-          <a href="/">
-            <Logo height={30} fill="white" />
-          </a>
+          <Logo height={30} fill="white" onClick={() => scrollTo('hero')} />
         </div>
 
         <div className="flex-grow">
