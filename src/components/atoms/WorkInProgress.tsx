@@ -7,7 +7,7 @@ const WorkInProgress: React.FC = () => {
       <a
         title="Twitter profile"
         target="_blank"
-        className="text-secondary-500"
+        className="text-primary"
         href="https://twitter.com/Stormix_co"
         rel="noreferrer"
       >

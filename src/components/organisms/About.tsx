@@ -6,7 +6,7 @@ const About: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center w-3/6 h-screen" id="about">
       <h3 className="text-5xl">
-        .about(<span className="text-secondary">&quot;me&quot;</span>)
+        .about(<span className="text-primary">&quot;me&quot;</span>)
       </h3>
 
       <div className="flex flex-col gap-4 mt-24 text-justify">
@@ -24,7 +24,7 @@ const About: React.FC = () => {
           {/* More recently, I received my Masters in both software engineering and robotics and started a full time job
           working for a startup known as <span className="cursor-pointer text-primary">Yogalive</span>. */}
           I’m actively looking for new opportunities, preferably fulltime and remote, so if you have something in mind,
-          let’s <span className="cursor-pointer text-secondary">.chat()</span>.
+          let’s <span className="cursor-pointer text-primary">.chat()</span>.
         </p>
 
         <p>I primarily use the following technologies, tools and libraries:</p>

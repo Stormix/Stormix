@@ -10,8 +10,12 @@
     ],
     "i18n-ally.keystyle": "nested",
     "cSpell.words": [
+      "Kufi",
       "languagedetector",
-      "Lngs"
+      "Lngs",
+      "Noto",
+      "Roboto",
+      "tailwindcss"
     ]
   }
 }

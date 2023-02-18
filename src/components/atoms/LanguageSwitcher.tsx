@@ -57,7 +57,7 @@ const LanguageSwitcher = () => {
       <div className="flex flex-col overflow-y-scroll no-scroll">
         {languages.map((lang) => (
           <span
-            className={cl('uppercase cursor-pointer text-secondary', {
+            className={cl('uppercase cursor-pointer text-primary', {
               'opacity-100': lang == i18n.language,
               'opacity-20': lang != i18n.language,
             })}
