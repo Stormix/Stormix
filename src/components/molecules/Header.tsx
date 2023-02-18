@@ -39,7 +39,7 @@ const Header = () => {
 
       <div className="container flex items-center py-8 mx-auto z-100">
         <div className="flex">
-          <a href="/" className="">
+          <a href="/">
             <Logo height={30} fill="white" />
           </a>
         </div>

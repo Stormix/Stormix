@@ -27,6 +27,7 @@ const LanguageSwitcher = () => {
 
     setLanguages(newLanguages);
     i18n.changeLanguage(language);
+    localStorage.setItem('i18nextLng', language);
   };
 
   // Set body dir based on language
@@ -40,6 +41,15 @@ const LanguageSwitcher = () => {
     );
   }, [i18n.language]);
 
+  // Set initial language
+  useEffect(() => {
+    const language = localStorage.getItem('i18nextLng') as Language;
+    if (language) {
+      onSelectLanguage(language);
+    } else {
+      onSelectLanguage(Language.English);
+    }
+  }, []);
   return (
     <div className="flex flex-row items-center justify-center gap-2">
       <GlobeAltIcon className="w-4 h-4 text-white" />
