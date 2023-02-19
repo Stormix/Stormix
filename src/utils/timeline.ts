@@ -1,18 +1,8 @@
 import { IExperience } from '@/types/timeline';
 
-export const getCol = (date: string, years: number[]) => {
-  const year = new Date(date).getFullYear();
-  const col = years.indexOf(year) + 1;
-  return col;
-};
+export const experienceTimelineIndices = (experience: IExperience, years: number[]) => {
+  const start = years.findIndex((year) => year === new Date(experience.start).getFullYear()) + 1;
+  const end = years.findIndex((year) => year === new Date(experience.end).getFullYear()) + 2;
 
-export const getColSpan = (experience: IExperience, years: number[]) => {
-  const start = getCol(experience.start, years);
-  const end = experience.end ? getCol(experience.end, years) : years.length;
-
-  return {
-    start,
-    end,
-    span: end - start + 1,
-  };
+  return { start, end };
 };
