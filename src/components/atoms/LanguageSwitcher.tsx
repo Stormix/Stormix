@@ -7,7 +7,10 @@ import React from 'react';
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
-  const [languages, setLanguages] = useState(() => Object.values(Language).sort((a, b) => a.localeCompare(b)));
+  const [languages, setLanguages] = useState(() => {
+    return [Language.English];
+    //Object.values(Language).sort((a, b) => a.localeCompare(b))
+  });
 
   const roll = (array: readonly Language[], direction: number, steps: number) => {
     const newArray: string[] = [];
