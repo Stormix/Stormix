@@ -5,7 +5,7 @@ const Time: FC<{ className?: string; years: number[] }> = ({ className, years })
   return (
     <div className={cl('', className)}>
       <div
-        className="grid pt-4 border-t-4 "
+        className="grid pt-4 border-t-4 border-background dark:border-background-light"
         style={{
           gridTemplateColumns: `repeat(${years.length}, 1fr)`,
         }}

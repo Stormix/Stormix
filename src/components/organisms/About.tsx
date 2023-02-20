@@ -1,6 +1,6 @@
 import { formatDistance, parse } from 'date-fns';
 import React from 'react';
-import useTextHighlighter from '../../hooks/useTextHighlighter';
+import useTextHighlighter from '@/hooks/useTextHighlighter';
 
 const About: React.FC = () => {
   const ref = React.useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ const About: React.FC = () => {
   }, [scrollHandler]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-3/6" id="about">
+    <div className="flex flex-col items-center justify-center w-3/6 pt-14" id="about">
       <h3 className="text-5xl">
         .about(<span className="text-primary">&quot;me&quot;</span>)
       </h3>
@@ -56,7 +56,7 @@ const About: React.FC = () => {
 
         <p>I primarily use the following technologies, tools and libraries:</p>
 
-        <ul className="px-4 list-disc columns-3">
+        <ul className="gap-4 px-4 list-disc columns-3">
           <li>Typescript</li>
           <li>Python</li>
           <li>PHP</li>
@@ -73,8 +73,7 @@ const About: React.FC = () => {
         </ul>
 
         <p>
-          but feel free to go through the timeline below for a more comprehensive list of stuff I worked with in the
-          past.
+          Feel free to go through the timeline below for a more comprehensive list of stuff I worked with in the past.
         </p>
       </div>
     </div>

@@ -11,11 +11,13 @@ const Timeline: FC<{ className?: string }> = ({ className }) => {
   const years = Array.from({ length: new Date().getFullYear() - startYear + 1 }, (_, i) => startYear + i);
 
   return (
-    <div className={cl(className, 'flex flex-col w-full px-4 py-4 dark:bg-primary-dark-900 bg-primary-light-400 ')}>
+    <div
+      className={cl(className, 'flex flex-col w-full px-4 my-4 py-4 dark:bg-primary-dark-900 bg-primary-light-400 ')}
+    >
       <div
         className={`grid gap-2`}
         style={{
-          gridTemplateColumns: `repeat(${years.length}, 1fr)`,
+          gridTemplateColumns: `repeat(${years.length * 4}, 1fr)`,
           gridTemplateRows: `repeat(${experiences.length + 1}, 1fr)`,
         }}
       >
@@ -28,8 +30,8 @@ const Timeline: FC<{ className?: string }> = ({ className }) => {
               style={{
                 gridRowStart: i + 1,
                 gridRowEnd: i + 2,
-                gridColumnStart: start,
-                gridColumnEnd: end,
+                gridColumnStart: 1 + parseInt((start * 4).toString()),
+                gridColumnEnd: 1 + parseInt((end * 4).toString()),
               }}
             />
           );

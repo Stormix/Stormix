@@ -25,7 +25,7 @@ const Popover: FC<{ className?: string; trigger?: ReactNode; children?: ReactNod
       </HeadlessPopover.Button>
       {open && (
         <HeadlessPopover.Panel
-          className="absolute z-10 w-full py-4 pl-4 mt-2 dark:bg-background bg-background-light"
+          className="absolute z-10 w-[400px] py-4 pl-4 mt-2 dark:bg-background bg-background-light"
           static
         >
           {children}

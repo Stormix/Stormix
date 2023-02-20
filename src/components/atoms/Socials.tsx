@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faInstagram, faLinkedin, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Socials: React.FC = () => {
   const socials = [
@@ -18,11 +18,6 @@ const Socials: React.FC = () => {
       label: 'Linkedin',
       icon: <FontAwesomeIcon icon={faLinkedin} />,
       url: 'https://www.linkedin.com/in/anasmazouni/',
-    },
-    {
-      label: 'Instagram',
-      icon: <FontAwesomeIcon icon={faInstagram} />,
-      url: 'https://www.instagram.com/stormix.co/',
     },
     {
       label: 'StackOverflow',
