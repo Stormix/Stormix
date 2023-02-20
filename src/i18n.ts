@@ -20,7 +20,7 @@ i18n
     fallbackNS: ['general'],
     lowerCaseLng: true,
     load: 'currentOnly',
-    supportedLngs: ['en-us', 'fr-fr', 'ar-ma'],
+    supportedLngs: ['en-us'], //, 'fr-fr', 'ar-ma'],
     fallbackLng: 'en-us',
 
     // Other settings
