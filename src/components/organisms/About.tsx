@@ -1,23 +1,32 @@
 import { formatDistance, parse } from 'date-fns';
 import React from 'react';
+import useTextHighlighter from '../../hooks/useTextHighlighter';
 
 const About: React.FC = () => {
+  const ref = React.useRef<HTMLDivElement>(null);
   const since = formatDistance(parse('2019-08-29', 'yyyy-MM-dd', new Date()), new Date(), { addSuffix: true });
 
+  const scrollHandler = useTextHighlighter<HTMLDivElement>(ref);
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, [scrollHandler]);
+
   return (
-    <div className="flex flex-col items-center justify-center w-3/6 h-screen" id="about">
+    <div className="flex flex-col items-center justify-center w-3/6" id="about">
       <h3 className="text-5xl">
         .about(<span className="text-primary">&quot;me&quot;</span>)
       </h3>
 
-      <div className="flex flex-col gap-4 mt-24 text-justify">
+      <div className="flex flex-col gap-4 mt-24 text-justify" ref={ref}>
         <p>
           I started web development when I was 14 and my first project was a music website where I hosted some music
           projects I made with a friend mine. (Stormix was my <i>&quot;artist&quot;</i> name)
         </p>
         <p>
-          Fast-forward a few years, I got hooked to web development, and started my journey as a freelance software
-          developer. Since then, I have been helping clients around the world bring their ideas to reality.
+          Fast-forward a few years, I became obsessed with web development, and started my journey as a freelance
+          software developer. Since then, I have been helping clients around the world bring their ideas to reality.
         </p>
         <p>
           I moved to France {since}, to pursue an engineering degree in both software engineering and robotics at{' '}
