@@ -6,7 +6,7 @@ import Popover from './Popover';
 import EventCard from './EventCard';
 import { Color, colors } from '@/config/colors';
 
-const Experience: FC<{ experience: IEvent; style: CSSProperties; className?: string }> = ({
+const Event: FC<{ experience: IEvent; style: CSSProperties; className?: string }> = ({
   experience,
   className,
   style,
@@ -28,4 +28,4 @@ const Experience: FC<{ experience: IEvent; style: CSSProperties; className?: str
   );
 };
 
-export default Experience;
+export default Event;
