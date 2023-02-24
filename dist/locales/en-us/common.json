@@ -20,11 +20,5 @@
     "resume": ".resume()",
     "projects": ".projects()",
     "contact": ".contact()"
-  },
-  "experience": "Experience",
-  "experience_other": "Experiences",
-  "education": "Education",
-  "education_other": "Educations",
-  "skill": "Skill",
-  "skill_other": "Skills"
+  }
 }

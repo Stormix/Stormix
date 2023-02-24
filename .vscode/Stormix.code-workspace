@@ -24,6 +24,7 @@
       "Roboto",
       "tailwindcss",
       "Yogalive"
-    ]
+    ],
+    "typescript.preferences.importModuleSpecifier": "non-relative"
   }
 }

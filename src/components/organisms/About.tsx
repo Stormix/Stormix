@@ -1,5 +1,5 @@
 import { formatDistance, parse } from 'date-fns';
-import React from 'react';
+import React, { useEffect } from 'react';
 import useTextHighlighter from '@/hooks/useTextHighlighter';
 
 const About: React.FC = () => {
@@ -8,13 +8,13 @@ const About: React.FC = () => {
 
   const scrollHandler = useTextHighlighter<HTMLDivElement>(ref);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', scrollHandler);
     return () => window.removeEventListener('scroll', scrollHandler);
   }, [scrollHandler]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-3/6 pt-14" id="about">
+    <div className="flex flex-col items-center justify-center w-3/6 py-14" id="about">
       <h3 className="text-5xl">
         .about(<span className="text-primary">&quot;me&quot;</span>)
       </h3>

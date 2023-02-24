@@ -1,14 +1,14 @@
 {
-  "download-resume": "Download Resume",
+  "download-resume": "تنزيل السيرة الذاتية",
   "hero": {
-    "intro": "Hi",
-    "title": "I'm <1>Anas</1> Mazouni"
+    "intro": "مرحبا",
+    "title": "اسمي<1> أنس </1>مازوني"
   },
   "resume": {
     "resume": {
       "title": ".resume()"
     },
-    "workExperience": {
+    "experience": {
       "title": ".workExperience()"
     },
     "timeline": {
@@ -20,11 +20,5 @@
     "resume": ".resume()",
     "projects": ".projects()",
     "contact": ".contact()"
-  },
-  "experience": "Experience",
-  "experience_other": "Experiences",
-  "education": "Education",
-  "education_other": "Educations",
-  "skill": "Skill",
-  "skill_other": "Skills"
+  }
 }

@@ -4,6 +4,11 @@ export interface Color {
   text: string;
 }
 
+/**
+ * Colors used in the timeline
+ * (This needs to be hardcoded because Tailwind doesn't support dynamic classes)
+ * @type {Color[]}
+ */
 export const colors: Color[] = [
   {
     border: 'border-green-400',

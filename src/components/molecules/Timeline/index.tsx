@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
 import { cl } from 'dynamic-class-list';
-import Event from '@/components/atoms/Timeline/Event';
+import TimelineEvent from '@/components/molecules/Timeline/TimelineEvent';
 import Time from './Time';
 import { experienceTimelineIndices } from '@/utils/timeline';
 import { experiences } from '@/config/experiences';
 
 const Timeline: FC<{ className?: string }> = ({ className }) => {
-  // Get the start year from the first experience
   const startYear = new Date(experiences[experiences.length - 1].start).getFullYear();
-  const years = Array.from({ length: new Date().getFullYear() - startYear + 1 }, (_, i) => startYear + i);
+  const years = Array.from({ length: new Date().getFullYear() - startYear }, (_, i) => startYear + i);
 
   return (
     <div
@@ -24,7 +23,7 @@ const Timeline: FC<{ className?: string }> = ({ className }) => {
         {experiences.map((experience, i) => {
           const { start, end } = experienceTimelineIndices(experience, years);
           return (
-            <Event
+            <TimelineEvent
               key={i}
               experience={experience}
               style={{

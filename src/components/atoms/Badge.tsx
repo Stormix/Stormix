@@ -2,22 +2,31 @@ import React, { FC, ReactNode } from 'react';
 import { Color } from '@/config/colors';
 import { cl } from 'dynamic-class-list';
 
-const Badge: FC<{ className?: string; children?: ReactNode; color: Color }> = ({ className, children, color }) => {
+const Badge: FC<{ className?: string; children?: ReactNode; color?: Color; onClick?: () => void }> = ({
+  className,
+  children,
+  color = {
+    text: 'text-primary-dark-400',
+    bg: 'bg-primary-dark-400',
+  },
+  onClick,
+}) => {
   const changeHue = (color: string, amount: number) => {
     return color.replace('400', amount.toString());
   };
 
   return (
-    <div
+    <span
       className={cl(
-        `text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md`,
+        `text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md cursor-pointer flex items-center justify-center shrink`,
         className,
         changeHue(color.text, 300),
         changeHue(color.bg, 400),
       )}
+      onClick={() => onClick?.()}
     >
       {children}
-    </div>
+    </span>
   );
 };
 

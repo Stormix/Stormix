@@ -7,15 +7,13 @@ interface UseClickOutsideProps {
 
 /**
  * Hook that alerts clicks outside of the passed ref
+ * @param {UseClickOutsideProps} - The ref and handler to use
+ * @returns {void}
  */
 const useOnClickOutside = ({ ref, handler }: UseClickOutsideProps) => {
   useEffect(() => {
-    /**
-     * Alert if clicked on outside of element
-     */
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
-        console.log('You clicked outside of me!');
         handler(event);
       }
     };

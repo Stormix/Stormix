@@ -17,7 +17,6 @@ const useTextHighlighter = <T extends HTMLElement>(ref: RefObject<T>) => {
   const scrollHandler = () => {
     if (ref.current) {
       const children = ref.current?.children;
-      console.log(children);
       for (let i = 0; i < children.length; i++) {
         const child = children[i] as HTMLElement;
         child.style.opacity = isInViewport(child) ? '1' : '0.5';

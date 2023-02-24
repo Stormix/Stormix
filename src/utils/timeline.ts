@@ -1,20 +1,18 @@
-import { IEvent } from '@/types/timeline';
+import { Event } from '@/types/timeline';
 
-export const experienceTimelineIndices = (experience: IEvent, years: number[]) => {
-  const start =
-    years.findIndex((year) => year === new Date(experience.start).getFullYear()) +
-    (new Date(experience.start).getMonth() + 1) / 12;
+/**
+ * Returns the start and end indices of an experience in the timeline
+ *
+ * @param experience - The experience to get the indices for
+ * @param years - The years to get the indices for
+ * @returns The start and end indices of the experience
+ */
+export const experienceTimelineIndices = (experience: Event, years: number[]) => {
+  const startDate = new Date(experience.start);
+  const start = years.findIndex((year) => year === startDate.getFullYear()) + (startDate.getMonth() + 1) / 12;
 
-  const end =
-    years.findIndex((year) => year === new Date(experience.end).getFullYear()) +
-    (new Date(experience.end).getMonth() + 1) / 12;
-  console.log(
-    { ...experience },
-    { start, end },
-    {
-      start: parseInt((start * 4).toString()),
-      end: parseInt((end * 4).toString()),
-    },
-  );
+  const endDate = experience.end === 'present' ? new Date() : new Date(experience.end);
+  const end = years.findIndex((year) => year === endDate.getFullYear()) + (endDate.getMonth() + 1) / 12;
+
   return { start, end };
 };

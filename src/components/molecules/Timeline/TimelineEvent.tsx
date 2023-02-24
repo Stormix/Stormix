@@ -1,12 +1,14 @@
-import React, { CSSProperties, FC } from 'react';
-import { IEvent } from '@/types/timeline';
+import React from 'react';
+
+import EventTooltip from '@/components/atoms/EventTooltip';
+import Popover from '@/components/atoms/Popover';
+import { Color, colors } from '@/config/colors';
+import { Event } from '@/types/timeline';
 import { cl } from 'dynamic-class-list';
 import { sample } from 'lodash';
-import Popover from './Popover';
-import EventTooltip from './EventTooltip';
-import { Color, colors } from '@/config/colors';
+import { CSSProperties, FC } from 'react';
 
-const Event: FC<{ experience: IEvent; style: CSSProperties; className?: string }> = ({
+const TimelineEvent: FC<{ experience: Event; style: CSSProperties; className?: string }> = ({
   experience,
   className,
   style,
@@ -32,4 +34,4 @@ const Event: FC<{ experience: IEvent; style: CSSProperties; className?: string }
   );
 };
 
-export default Event;
+export default TimelineEvent;

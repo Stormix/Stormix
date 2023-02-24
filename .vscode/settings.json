@@ -5,4 +5,9 @@
   "i18n-ally.localesPaths": [
     "public/locales"
   ],
+  "cSpell.words": [
+    "Centrale",
+    "École",
+    "Yogalive"
+  ],
 }
