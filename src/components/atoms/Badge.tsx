@@ -6,7 +6,7 @@ const Badge: FC<{ className?: string; children?: ReactNode; color?: Color; onCli
   className,
   children,
   color = {
-    text: 'text-primary-dark-400',
+    text: 'dark:text-primary-dark-400 text-primary-light',
     bg: 'bg-primary-dark-400',
   },
   onClick,
@@ -18,7 +18,7 @@ const Badge: FC<{ className?: string; children?: ReactNode; color?: Color; onCli
   return (
     <span
       className={cl(
-        `text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md cursor-pointer flex items-center justify-center shrink`,
+        `text-xs font-medium mr-2 px-2.5 py-1 rounded-md cursor-pointer flex items-center justify-center shrink`,
         className,
         changeHue(color.text, 300),
         changeHue(color.bg, 400),

@@ -14,18 +14,18 @@ const Popover: FC<{ className?: string; trigger?: ReactNode; children?: ReactNod
   useOnClickOutside({ ref, handler: () => setOpen(false) });
 
   return (
-    <HeadlessPopover className={cl('relative', className)}>
+    <HeadlessPopover className={cl('block md:relative', className)}>
       <HeadlessPopover.Button
         ref={ref}
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
-        onClick={() => setOpen(true)}
+        onClick={() => setOpen(!open)}
       >
         {trigger}
       </HeadlessPopover.Button>
       {open && (
         <HeadlessPopover.Panel
-          className="absolute z-10 w-[400px] py-4 pl-4 mt-2 dark:bg-background bg-background-light"
+          className="absolute z-10 w-screen left-0 md:w-[400px] py-4 pl-4 mt-2 dark:bg-background bg-background-light"
           static
         >
           {children}

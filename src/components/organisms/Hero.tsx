@@ -7,14 +7,14 @@ const Hero: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className="flex flex-col h-screen" id="hero">
-      <div className="flex flex-col w-3/6 m-auto">
-        <div className="flex flex-row text-primary">
+      <div className="flex flex-col w-11/12 mx-auto my-auto md:w-3/6 md:m-auto">
+        <div className="z-20 flex flex-row text-primary">
           <div className="w-8 border-t border-primary bottom-[-12px] relative" />
           <span className="ml-2">{t('hero.intro')}</span>
         </div>
 
         <div className="mt-2">
-          <p className="mb-4 text-5xl">
+          <p className="mb-4 text-4xl">
             <Trans i18nKey={'hero.title'}>
               I&apos;m <span className="text-primary">Anas</span> Mazouni
             </Trans>

@@ -18,14 +18,14 @@ const EventCard: FC<{
 
   return (
     <div className="flex flex-col gap-1">
-      <div className="flex flex-row items-center justify-between mb-2">
+      <div className="flex flex-col mb-2 md:items-center md:justify-between md:flex-row">
         <div className="flex flex-col gap-1">
           <h3 className="font-bold text-primary">{event.position}</h3>
           <h4>
             {event.company}, {event.location}
           </h4>
         </div>
-        <div>
+        <div className="italic ">
           {formatExperienceDate(event.start)} - {formatExperienceDate(endDate)}
         </div>
       </div>

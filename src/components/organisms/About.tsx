@@ -14,12 +14,12 @@ const About: React.FC = () => {
   }, [scrollHandler]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-3/6 py-14" id="about">
+    <div className="flex flex-col items-center justify-center w-11/12 md:w-3/6 py-14" id="about">
       <h3 className="text-5xl">
         .about(<span className="text-primary">&quot;me&quot;</span>)
       </h3>
 
-      <div className="flex flex-col gap-4 mt-24 text-justify" ref={ref}>
+      <div className="z-10 flex flex-col gap-4 mt-24 text-justify" ref={ref}>
         <p>
           I started web development when I was 14 and my first project was a music website where I hosted some music
           projects I made with a friend mine. (Stormix was my <i>&quot;artist&quot;</i> name)
@@ -56,7 +56,7 @@ const About: React.FC = () => {
 
         <p>I primarily use the following technologies, tools and libraries:</p>
 
-        <ul className="gap-4 px-4 list-disc columns-3">
+        <ul className="gap-4 px-4 list-disc columns-2 text-start">
           <li>Typescript</li>
           <li>Python</li>
           <li>PHP</li>

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Language } from '@/types/language';
 import React from 'react';
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ className }: { className: string }) => {
   const { i18n } = useTranslation();
 
   const [languages, setLanguages] = useState(() => {
@@ -53,7 +53,7 @@ const LanguageSwitcher = () => {
     }
   }, []);
   return (
-    <div className="flex flex-row items-center justify-center gap-2">
+    <div className={cl('flex flex-row items-center justify-center gap-2', className)}>
       <div>.setLang(</div>
       <div className="flex flex-col overflow-y-scroll no-scroll">
         {languages.map((lang) => (

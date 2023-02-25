@@ -14,8 +14,8 @@ const WorkExperience: React.FC = () => {
   return (
     <div className="flex flex-col w-full gap-4">
       <h4 className="mb-4 text-3xl">{t('resume.workExperience.title')}</h4>
-      <div className="flex flex-row w-full gap-12 px-8 py-8 dark:bg-primary-dark-900 bg-primary-light-400">
-        <div className="flex flex-col w-8/12 gap-8">
+      <div className="flex flex-col-reverse w-full gap-12 px-8 py-8 dark:bg-primary-dark-900 bg-primary-light-400 md:flex-row">
+        <div className="flex flex-col w-full gap-8 md:w-8/12">
           <h3 className="text-xl font-bold capitalize">{t('experiences', { count: workExperiences.length })}</h3>
           {workExperiences.map((experience, i) => (
             <EventCard event={experience} key={i} />
@@ -26,7 +26,7 @@ const WorkExperience: React.FC = () => {
             <EventCard event={experience} key={i} />
           ))}
         </div>
-        <div className="flex flex-col w-4/12 gap-8">
+        <div className="flex flex-col w-full gap-8 md:w-4/12">
           <h3 className="text-xl font-bold capitalize">{t('skill', { count: 3 })}</h3>
           <div className="flex flex-col flex-wrap gap-4">
             <KeywordsCloud />

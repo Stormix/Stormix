@@ -1,5 +1,5 @@
 .scroll-down {
-  @apply border-2 dark:border-background-light border-background;
+  @apply hidden md:block border-2 dark:border-background-light border-background;
   border-radius: 20px;
   bottom: 60px;
   height: 50px;

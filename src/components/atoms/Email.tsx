@@ -2,7 +2,7 @@ import React from 'react';
 
 const Email: React.FC = () => {
   return (
-    <div className="flex flex-col w-4 gap-4">
+    <div className="flex-col hidden w-4 gap-4 md:flex">
       <a className="-rotate-90 hover:text-primary" href="mailto:hello@stormix.co">
         hello@stormix.co
       </a>
