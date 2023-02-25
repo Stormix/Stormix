@@ -6,7 +6,7 @@ const Email: React.FC = () => {
       <a className="-rotate-90 hover:text-primary" href="mailto:hello@stormix.co">
         hello@stormix.co
       </a>
-      <div className="h-24 ml-[5px] border-l dark:border-background-light border-background" />
+      <div className="h-16 ml-[5px] border-l dark:border-background-light border-background" />
     </div>
   );
 };

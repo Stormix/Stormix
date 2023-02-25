@@ -6,6 +6,7 @@ import Badge from './Badge';
 import { useApp } from '@/providers/AppProvider';
 import { keywordToColor } from '@/utils/colors';
 import { Transition } from '@headlessui/react';
+import { cl } from 'dynamic-class-list';
 
 const EventCard: FC<{
   event: Event;
@@ -14,10 +15,16 @@ const EventCard: FC<{
 
   const showDescription = (keywords: Description['keywords']) =>
     !keywords || keywords.some((keyword) => isSelected(keyword)) || state.selectedKeywords.length === 0;
+  const showEvent = (event: Event) => event.descriptions?.some(({ keywords }) => showDescription(keywords));
   const endDate = event.end === 'present' ? new Date() : new Date(event.end);
 
   return (
-    <div className="flex flex-col gap-1">
+    <div
+      className={cl(' flex-col gap-1', {
+        hidden: !showEvent(event),
+        flex: showEvent(event),
+      })}
+    >
       <div className="flex flex-col mb-2 md:items-center md:justify-between md:flex-row">
         <div className="flex flex-col gap-1">
           <h3 className="font-bold text-primary">{event.position}</h3>

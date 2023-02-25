@@ -20,9 +20,8 @@ const WorkInProgress: React.FC = () => {
         @Stormix_co
       </a>
       <span className="flex-grow hidden lg:flex">to stay updated...</span>
-
-      <span className="hidden lg:flex">
-        Last commit -{' '}
+      <span className="hidden gap-2 lg:flex">
+        Last commit{' '}
         <a
           target="_blank"
           className="text-primary"

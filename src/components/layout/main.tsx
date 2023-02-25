@@ -4,6 +4,7 @@ import { FC } from 'react';
 import Email from '@/components/atoms/Email';
 import Socials from '@/components/atoms/Socials';
 import Header from '@/components/molecules/Header';
+import Footer from '@/components/molecules/Footer';
 
 const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -20,6 +21,7 @@ const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
             {children}
           </div>
         </main>
+        <Footer />
       </div>
     </>
   );
