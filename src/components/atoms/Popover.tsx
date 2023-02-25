@@ -19,7 +19,9 @@ const Popover: FC<{ className?: string; trigger?: ReactNode; children?: ReactNod
         ref={ref}
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setOpen(!open);
+        }}
       >
         {trigger}
       </HeadlessPopover.Button>
