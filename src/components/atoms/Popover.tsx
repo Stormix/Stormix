@@ -15,15 +15,8 @@ const Popover: FC<{ className?: string; trigger?: ReactNode; children?: ReactNod
 
   return (
     <HeadlessPopover className={cl('block lg:relative', className)}>
-      <HeadlessPopover.Button
-        ref={ref}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
-        onClick={() => {
-          setOpen(!open);
-        }}
-      >
-        {trigger}
+      <HeadlessPopover.Button ref={ref} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+        <div onClick={() => setOpen(!open)}>{trigger}</div>
       </HeadlessPopover.Button>
       {open && (
         <HeadlessPopover.Panel
