@@ -11,7 +11,10 @@ const Timeline: FC<{ className?: string }> = ({ className }) => {
 
   return (
     <div
-      className={cl(className, 'flex flex-col w-full px-4 my-4 py-4 dark:bg-primary-dark-900 bg-primary-light-400 ')}
+      className={cl(
+        className,
+        'flex flex-col w-full px-4 my-4 py-4 dark:bg-primary-dark-900  rounded bg-primary-light-400 ',
+      )}
     >
       <div
         className={`grid gap-2`}

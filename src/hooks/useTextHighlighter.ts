@@ -8,7 +8,7 @@ const useTextHighlighter = <T extends HTMLElement>(ref: RefObject<T>) => {
     if (!elem) return false;
     const bounding = elem.getBoundingClientRect();
     const height = window.innerHeight || document.documentElement.clientHeight;
-    const topBoundary = height * 0.5;
+    const topBoundary = height * 0.2;
     const bottomBoundary = height * 0.8;
     const middleOnScreen = bounding.top + bounding.height / 2;
     return middleOnScreen >= topBoundary && middleOnScreen <= bottomBoundary;
