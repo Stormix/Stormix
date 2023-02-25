@@ -11,8 +11,8 @@ const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
     <>
       <div className="flex flex-col items-center w-full h-full bg-background-light dark:bg-background dark:text-primary-light text-primary-dark">
         <Header />
-        <Email className={'fixed bottom-0 left-32'} />
-        <Socials className={'fixed bottom-0 right-32'} />
+        <Email className={'fixed bottom-0 lg:left-32'} />
+        <Socials className={'fixed bottom-0 lg:right-32'} />
         <main className="container flex flex-col m-auto">
           <div className="container flex flex-col w-full">{children}</div>
         </main>
