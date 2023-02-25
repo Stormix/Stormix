@@ -2,8 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { cl } from 'dynamic-class-list';
 
-const Socials: React.FC = () => {
+const Socials: React.FC<{
+  className?: string;
+}> = ({ className }) => {
   const socials = [
     {
       label: 'Twitter',
@@ -27,13 +30,18 @@ const Socials: React.FC = () => {
     },
     {
       label: 'Email',
-      icon: <FontAwesomeIcon icon={faEnvelope} className="block md:hidden" />,
+      icon: <FontAwesomeIcon icon={faEnvelope} className="block lg:hidden" />,
       url: 'mailto:hello@stormix.co',
     },
   ];
   return (
-    <div className="z-50 flex flex-row items-center w-full gap-4 p-4 bg-background-light dark:bg-background md:w-4 md:flex-col md:bg-none">
-      <span className="flex flex-grow md:hidden">Get in touch: </span>
+    <div
+      className={cl(
+        'z-50 flex flex-row items-center w-full gap-4 p-4 bg-background-light dark:bg-background lg:w-4 lg:flex-col lg:bg-none',
+        className,
+      )}
+    >
+      <span className="flex flex-grow lg:hidden">Get in touch: </span>
 
       {socials.map((social) => (
         <a
@@ -46,7 +54,7 @@ const Socials: React.FC = () => {
           {social.icon}
         </a>
       ))}
-      <div className="h-12 ml-[5px] border-l dark:border-background-light border-background hidden md:flex" />
+      <div className="h-12 ml-[5px] border-l dark:border-background-light border-background hidden lg:flex" />
     </div>
   );
 };

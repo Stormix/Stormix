@@ -20,4 +20,5 @@ export interface Event {
   short_description?: string;
   descriptions?: Description[];
   keywords?: Keyword[];
+  link?: string;
 }

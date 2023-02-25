@@ -14,7 +14,7 @@ const About: React.FC = () => {
   }, [scrollHandler]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-11/12 md:w-3/6 py-14" id="about">
+    <div className="flex flex-col items-center justify-center w-11/12 lg:w-3/6 py-14" id="about">
       <h3 className="text-5xl">
         .about(<span className="text-primary">&quot;me&quot;</span>)
       </h3>

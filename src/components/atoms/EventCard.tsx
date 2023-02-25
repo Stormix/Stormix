@@ -7,6 +7,8 @@ import { useApp } from '@/providers/AppProvider';
 import { keywordToColor } from '@/utils/colors';
 import { Transition } from '@headlessui/react';
 import { cl } from 'dynamic-class-list';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const EventCard: FC<{
   event: Event;
@@ -25,11 +27,14 @@ const EventCard: FC<{
         flex: showEvent(event),
       })}
     >
-      <div className="flex flex-col mb-2 md:items-center md:justify-between md:flex-row">
+      <div className="flex flex-col mb-2 lg:items-center lg:justify-between lg:flex-row">
         <div className="flex flex-col gap-1">
           <h3 className="font-bold text-primary">{event.position}</h3>
           <h4>
-            {event.company}, {event.location}
+            {event.company}, {event.location}{' '}
+            <a href={event.link ?? '#'} target={'_blank'} className="hover:text-primary" rel="noreferrer">
+              <FontAwesomeIcon size={'xs'} icon={faArrowUpRightFromSquare} />
+            </a>
           </h4>
         </div>
         <div className="italic ">

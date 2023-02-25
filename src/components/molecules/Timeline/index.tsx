@@ -6,7 +6,13 @@ import { experienceTimelineIndices } from '@/utils/timeline';
 import { experiences } from '@/config/experiences';
 
 const Timeline: FC<{ className?: string }> = ({ className }) => {
-  const startYear = new Date(experiences[experiences.length - 1].start).getFullYear();
+  const sortedExperiences = experiences.sort((a, b) => {
+    const aStart = new Date(a.start).getTime();
+    const bStart = new Date(b.start).getTime();
+    return aStart - bStart;
+  });
+
+  const startYear = new Date(sortedExperiences[0].start).getFullYear();
   const years = Array.from({ length: new Date().getFullYear() - startYear }, (_, i) => startYear + i);
 
   return (

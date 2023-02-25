@@ -16,15 +16,15 @@ const WorkExperience: React.FC = () => {
   return (
     <div className="flex flex-col w-full gap-4">
       <h4 className="mb-4 text-3xl">{t('resume.workExperience.title')}</h4>
-      <div className="flex flex-col-reverse w-full gap-8 md:flex-row">
-        <div className="flex flex-col w-full p-4 rounded md:w-8/12 dark:bg-primary-dark-900 bg-primary-light-400 md:p-6">
+      <div className="flex flex-col-reverse w-full gap-8 lg:flex-row">
+        <div className="flex flex-col w-full p-4 rounded lg:w-8/12 dark:bg-primary-dark-900 bg-primary-light-400 lg:p-6">
           <Tab.Group>
-            <Tab.List className={'flex justify-between md:justify-start md:gap-4 w-full'}>
+            <Tab.List className={'flex justify-between lg:justify-start lg:gap-4 w-full'}>
               <Tab as={Fragment}>
                 {({ selected }) => (
                   <h3
                     className={cl(
-                      'text-xl font-bold focus:outline-none capitalize py-4 px-4 md:pr-8 md:pb-4 md:pl-0 md:pt-0 cursor-pointer',
+                      'text-xl font-bold focus:outline-none capitalize py-4 px-4 lg:pr-8 lg:pb-4 lg:pl-0 lg:pt-0 cursor-pointer',
                       {
                         'border-b-2 border-primary-dark dark:border-primary-light': selected,
                       },
@@ -38,7 +38,7 @@ const WorkExperience: React.FC = () => {
                 {({ selected }) => (
                   <h3
                     className={cl(
-                      'text-xl font-bold focus:outline-none capitalize py-4 px-4 md:pr-8 md:pb-4 md:pl-0 md:pt-0 cursor-pointer',
+                      'text-xl font-bold focus:outline-none capitalize py-4 px-4 lg:pr-8 lg:pb-4 lg:pl-0 lg:pt-0 cursor-pointer',
                       {
                         'border-b-2 border-primary-dark dark:border-primary-light': selected,
                       },
@@ -63,7 +63,7 @@ const WorkExperience: React.FC = () => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        <div className="flex flex-col w-full gap-8 p-4 rounded h-fit md:w-4/12 dark:bg-primary-dark-900 bg-primary-light-400 md:p-6">
+        <div className="flex flex-col w-full gap-8 p-4 rounded h-fit lg:w-4/12 dark:bg-primary-dark-900 bg-primary-light-400 lg:p-6">
           <h3 className="text-xl font-bold capitalize">
             <span className="py-4 border-b-2 ">{t('skill', { count: 3 })}</span>
           </h3>

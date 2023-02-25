@@ -55,7 +55,7 @@ export const experiences: Event[] = [
   {
     company: 'Freelance',
     position: 'Software Developer',
-    start: '2019-03-01',
+    start: '2015-12-01',
     end: '2020-03-01',
     location: 'Remote (France / Morocco)',
     short_description:

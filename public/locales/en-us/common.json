@@ -27,5 +27,9 @@
   "education_other": "Educations",
   "skill": "Skill",
   "skill_other": "Skills",
-  "copyright": "All Rights Reserved."
+  "copyright": "All Rights Reserved.",
+  "credits": "special thanks to",
+  "show-more": "Show more",
+  "show-less": "Show less",
+  "say-hello": "Say Hello"
 }

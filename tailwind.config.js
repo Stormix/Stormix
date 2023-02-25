@@ -3,12 +3,28 @@ module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    keyframes: {
+      rotateColor: {
+        from: { transform: 'rotate(0deg)' },
+        to: { transform: 'rotate(360deg)' },
+      },
+    },
+    animation: {
+      rotateColor: 'rotateColor 5s linear infinite',
+    },
     fontFamily: {
       mono: ['Roboto Mono', 'monospace'],
       display: ['Roboto Mono', 'monospace'],
       body: ['Roboto Mono', 'monospace'],
     },
     extend: {
+      zIndex: {
+        60: '60',
+        70: '70',
+        80: '80',
+        90: '90',
+        100: '100',
+      },
       fontFamily: {
         sans: ['var(--primary-font)'],
         arabic: ['Noto Kufi Arabic', 'sans-serif'],

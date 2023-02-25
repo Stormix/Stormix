@@ -38,13 +38,13 @@ const Header = () => {
     <div className="fixed z-50 w-full dark:bg-background bg-background-light">
       <WorkInProgress />
 
-      <div className="container flex items-center px-4 py-8 mx-auto md:px-0">
+      <div className="container flex items-center px-4 py-8 mx-auto lg:px-0">
         <div className="flex">
           <Logo height={30} fill="currentColor" onClick={() => scrollTo('hero')} />
         </div>
 
         <div className="flex-grow">
-          <nav className="justify-center hidden gap-4 md:flex md:flex-row">
+          <nav className="justify-center hidden gap-4 lg:flex lg:flex-row">
             {paths.map(({ name, target }) => (
               <a key={target} className="lowercase cursor-pointer hover:text-primary" onClick={() => scrollTo(name)}>
                 {t(`nav.${name}`)}
@@ -54,7 +54,7 @@ const Header = () => {
         </div>
 
         <div className="flex flex-row items-center justify-end gap-4">
-          <LanguageSwitcher className="hidden md:flex" />
+          <LanguageSwitcher className="hidden lg:flex" />
           <DarkModeSwitch />
         </div>
       </div>
