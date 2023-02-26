@@ -1,0 +1,18 @@
+ query Articles {
+    articles {
+      data {
+        attributes {
+          slug
+          title
+          category {
+            data {
+              attributes {
+                slug
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
