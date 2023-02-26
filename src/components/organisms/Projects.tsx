@@ -8,7 +8,7 @@ const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col items-center w-full gap-4 my-24">
+    <div className="flex flex-col items-center w-full gap-4 my-24" id="projects">
       <h3 className="text-5xl">.projects()</h3>
       <p>Here are some of my projects</p>
       <div className="grid w-11/12 grid-cols-1 gap-6 my-12 lg:grid-cols-3 lg:w-10/12">

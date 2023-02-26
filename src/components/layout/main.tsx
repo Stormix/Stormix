@@ -6,11 +6,11 @@ import Footer from '@/components/molecules/Footer';
 import Socials from '@/components/atoms/Socials';
 import Email from '@/components/atoms/Email';
 
-const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
+const Layout: FC<{ children: React.ReactNode; noNav?: boolean }> = ({ children, noNav }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full h-full bg-background-light dark:bg-background dark:text-primary-light text-primary-dark">
-        <Header />
+        <Header noNav={noNav} />
         <Email className={'fixed bottom-0 lg:left-32'} />
         <Socials className={'fixed bottom-0 lg:right-32'} />
         <main className="container flex flex-col m-auto">

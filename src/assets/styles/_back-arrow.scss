@@ -1,0 +1,19 @@
+.back-arrow {
+  @apply border-primary border-t-2 border-l-2;
+
+  display: block;
+  width: 11px;
+  height: 11px;
+  transform: rotate(-45deg);
+
+  &::after {
+    @apply bg-primary;
+    content: '';
+    display: block;
+    width: 2px;
+    height: 45px;
+    transform: rotate(-45deg) translate(15px, 6px);
+    left: 0;
+    top: 0;
+  }
+}

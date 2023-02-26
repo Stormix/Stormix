@@ -19,7 +19,8 @@
     "about": ".about()",
     "resume": ".resume()",
     "projects": ".projects()",
-    "contact": ".contact()"
+    "contact": ".contact()",
+    "blog": ".blog()"
   },
   "experience": "Experience",
   "experience_other": "Experiences",

@@ -6,7 +6,7 @@ const Contact: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col items-center w-full gap-4 my-24">
+    <div className="flex flex-col items-center w-full gap-4 my-24" id="contact">
       <h3 className="mb-6 text-5xl">.contact()</h3>
       <div className="flex flex-col justify-center w-11/12 lg:w-3/6 item-center">
         <p className="text-center">
