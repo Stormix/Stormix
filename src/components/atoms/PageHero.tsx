@@ -5,9 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 const PageHero: React.FC<{
   title: string;
+  subtitle?: string;
   children?: React.ReactNode;
   onBack?: () => void;
-}> = ({ title, children, onBack }) => {
+}> = ({ title, subtitle, children, onBack }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -23,7 +24,7 @@ const PageHero: React.FC<{
         </div>
 
         <h1 className="text-6xl font-bold">{title}</h1>
-        <p>Find the latest of my writing here</p>
+        <p>{subtitle ?? 'Find the latest of my writing here'}</p>
         {children}
         <ScrollDown />
       </div>

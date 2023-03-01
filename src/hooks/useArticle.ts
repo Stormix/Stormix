@@ -2,11 +2,11 @@ import { useMemo } from 'react';
 import { Article } from '@/types/blog';
 import { ComponentSharedRichText } from '@/types/gql';
 
-const useArticle = (article: Article) => {
+const useArticle = (article: Article | null) => {
   const content = useMemo(() => {
-    if (!article.attributes?.blocks) return null;
+    if (!article?.attributes?.blocks) return null;
 
-    const blocks = article.attributes?.blocks;
+    const blocks = article?.attributes?.blocks;
 
     const content =
       blocks
@@ -15,10 +15,9 @@ const useArticle = (article: Article) => {
             return (block as ComponentSharedRichText).body ?? '';
           }
         })
-        .join('') ?? '';
-    console.log(blocks);
+        .join('\n') ?? '';
     return content;
-  }, [article.attributes?.blocks]);
+  }, [article?.attributes?.blocks]);
 
   const readingTime = useMemo(() => {
     if (!content) return 0;
@@ -33,9 +32,9 @@ const useArticle = (article: Article) => {
 
   const keywords = useMemo(
     () =>
-      (article.attributes?.keywords?.data?.map((keyword) => keyword?.attributes?.name)?.filter(Boolean) ??
+      (article?.attributes?.keywords?.data?.map((keyword) => keyword?.attributes?.name)?.filter(Boolean) ??
         []) as string[],
-    [article.attributes?.keywords?.data],
+    [article?.attributes?.keywords?.data],
   );
 
   return {

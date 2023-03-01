@@ -1379,58 +1379,72 @@ export type UsersPermissionsUserRelationResponseCollection = {
 
 export type RichTextFragment = { __typename?: 'ComponentSharedRichText', body?: string | null };
 
+export type ArticleFragmentFragment = { __typename?: 'ArticleEntity', attributes?: { __typename?: 'Article', slug?: string | null, title?: string | null, description?: string | null, publishedAt?: any | null, cover?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', attributes?: { __typename?: 'UploadFile', url: string, blurhash?: string | null, width?: number | null, height?: number | null } | null } | null } | null, blocks?: Array<{ __typename?: 'ComponentSharedMedia' } | { __typename?: 'ComponentSharedQuote' } | { __typename?: 'ComponentSharedRichText', body?: string | null } | { __typename?: 'ComponentSharedSlider' } | { __typename?: 'Error' } | null> | null, keywords?: { __typename?: 'KeywordRelationResponseCollection', data: Array<{ __typename?: 'KeywordEntity', attributes?: { __typename?: 'Keyword', name?: string | null } | null }> } | null, category?: { __typename?: 'CategoryEntityResponse', data?: { __typename?: 'CategoryEntity', attributes?: { __typename?: 'Category', slug?: string | null, name?: string | null } | null } | null } | null } | null };
+
 export type ArticlesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type ArticlesQuery = { __typename?: 'Query', articles?: { __typename?: 'ArticleEntityResponseCollection', data: Array<{ __typename?: 'ArticleEntity', attributes?: { __typename?: 'Article', slug?: string | null, title?: string | null, description?: string | null, publishedAt?: any | null, cover?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', attributes?: { __typename?: 'UploadFile', url: string, blurhash?: string | null, width?: number | null, height?: number | null } | null } | null } | null, blocks?: Array<{ __typename?: 'ComponentSharedMedia' } | { __typename?: 'ComponentSharedQuote' } | { __typename?: 'ComponentSharedRichText', body?: string | null } | { __typename?: 'ComponentSharedSlider' } | { __typename?: 'Error' } | null> | null, keywords?: { __typename?: 'KeywordRelationResponseCollection', data: Array<{ __typename?: 'KeywordEntity', attributes?: { __typename?: 'Keyword', name?: string | null } | null }> } | null, category?: { __typename?: 'CategoryEntityResponse', data?: { __typename?: 'CategoryEntity', attributes?: { __typename?: 'Category', slug?: string | null, name?: string | null } | null } | null } | null } | null }> } | null };
+
+export type ArticleByIdQueryVariables = Exact<{
+  slug: StringFilterInput;
+}>;
+
+
+export type ArticleByIdQuery = { __typename?: 'Query', articles?: { __typename?: 'ArticleEntityResponseCollection', data: Array<{ __typename?: 'ArticleEntity', attributes?: { __typename?: 'Article', slug?: string | null, title?: string | null, description?: string | null, publishedAt?: any | null, cover?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', attributes?: { __typename?: 'UploadFile', url: string, blurhash?: string | null, width?: number | null, height?: number | null } | null } | null } | null, blocks?: Array<{ __typename?: 'ComponentSharedMedia' } | { __typename?: 'ComponentSharedQuote' } | { __typename?: 'ComponentSharedRichText', body?: string | null } | { __typename?: 'ComponentSharedSlider' } | { __typename?: 'Error' } | null> | null, keywords?: { __typename?: 'KeywordRelationResponseCollection', data: Array<{ __typename?: 'KeywordEntity', attributes?: { __typename?: 'Keyword', name?: string | null } | null }> } | null, category?: { __typename?: 'CategoryEntityResponse', data?: { __typename?: 'CategoryEntity', attributes?: { __typename?: 'Category', slug?: string | null, name?: string | null } | null } | null } | null } | null }> } | null };
 
 export const RichTextFragmentDoc = gql`
     fragment RichText on ComponentSharedRichText {
   body
 }
     `;
-export const ArticlesDocument = gql`
-    query Articles {
-  articles {
-    data {
-      attributes {
-        slug
-        cover {
-          data {
-            attributes {
-              url
-              blurhash
-              width
-              height
-            }
-          }
+export const ArticleFragmentFragmentDoc = gql`
+    fragment ArticleFragment on ArticleEntity {
+  attributes {
+    slug
+    cover {
+      data {
+        attributes {
+          url
+          blurhash
+          width
+          height
         }
-        title
-        description
-        publishedAt
-        blocks {
-          ...RichText
+      }
+    }
+    title
+    description
+    publishedAt
+    blocks {
+      ...RichText
+    }
+    keywords {
+      data {
+        attributes {
+          name
         }
-        keywords {
-          data {
-            attributes {
-              name
-            }
-          }
-        }
-        category {
-          data {
-            attributes {
-              slug
-              name
-            }
-          }
+      }
+    }
+    category {
+      data {
+        attributes {
+          slug
+          name
         }
       }
     }
   }
 }
     ${RichTextFragmentDoc}`;
+export const ArticlesDocument = gql`
+    query Articles {
+  articles {
+    data {
+      ...ArticleFragment
+    }
+  }
+}
+    ${ArticleFragmentFragmentDoc}`;
 
 /**
  * __useArticlesQuery__
@@ -1458,3 +1472,40 @@ export function useArticlesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<A
 export type ArticlesQueryHookResult = ReturnType<typeof useArticlesQuery>;
 export type ArticlesLazyQueryHookResult = ReturnType<typeof useArticlesLazyQuery>;
 export type ArticlesQueryResult = Apollo.QueryResult<ArticlesQuery, ArticlesQueryVariables>;
+export const ArticleByIdDocument = gql`
+    query ArticleById($slug: StringFilterInput!) {
+  articles(filters: {slug: $slug}) {
+    data {
+      ...ArticleFragment
+    }
+  }
+}
+    ${ArticleFragmentFragmentDoc}`;
+
+/**
+ * __useArticleByIdQuery__
+ *
+ * To run a query within a React component, call `useArticleByIdQuery` and pass it any options that fit your needs.
+ * When your component renders, `useArticleByIdQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useArticleByIdQuery({
+ *   variables: {
+ *      slug: // value for 'slug'
+ *   },
+ * });
+ */
+export function useArticleByIdQuery(baseOptions: Apollo.QueryHookOptions<ArticleByIdQuery, ArticleByIdQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<ArticleByIdQuery, ArticleByIdQueryVariables>(ArticleByIdDocument, options);
+      }
+export function useArticleByIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ArticleByIdQuery, ArticleByIdQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<ArticleByIdQuery, ArticleByIdQueryVariables>(ArticleByIdDocument, options);
+        }
+export type ArticleByIdQueryHookResult = ReturnType<typeof useArticleByIdQuery>;
+export type ArticleByIdLazyQueryHookResult = ReturnType<typeof useArticleByIdLazyQuery>;
+export type ArticleByIdQueryResult = Apollo.QueryResult<ArticleByIdQuery, ArticleByIdQueryVariables>;
