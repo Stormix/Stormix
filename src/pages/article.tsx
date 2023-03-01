@@ -47,12 +47,14 @@ const Article: FC = () => {
               <FontAwesomeIcon icon={faStopwatch} /> <span>{readingTime} min read</span>
             </div>
           </div>
-          <ImageLazyLoad
-            src={`https://cms.stormix.co${attributes?.cover?.data?.attributes?.url ?? ''}`}
-            blurHash={attributes?.cover?.data?.attributes?.blurhash ?? ''}
-            alt={attributes?.title ?? ''}
-          />
         </PageHero>
+
+        <ImageLazyLoad
+          src={`https://cms.stormix.co${attributes?.cover?.data?.attributes?.url ?? ''}`}
+          blurHash={attributes?.cover?.data?.attributes?.blurhash ?? ''}
+          alt={attributes?.title ?? ''}
+          className="w-11/12 lg:w-3/6"
+        />
         <div className="flex flex-col items-center justify-center w-11/12 lg:w-3/6 py-14" id="about">
           <div className="z-10 flex flex-col gap-4 mt-24 text-justify">
             <ReactMarkdown skipHtml={false}>{content ?? ''}</ReactMarkdown>
