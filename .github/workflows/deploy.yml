@@ -1,0 +1,35 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install caprover
+      run: sudo npm install -g caprover
+
+    - name: Install dependencies
+      run: yarn install --non-interactive
+    - name: THIS IS TEMPORARY
+      run: echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
+    - uses: TickX/var-to-dotenv@v1.1.1
+      with:
+        key: 'VITE_API_KEY'
+        value: ${{secrets.VITE_API_KEY}}
+        nullable: 'false'
+        envPath: '.env'
+
+    - name: Compile assets
+      run: yarn build
+
+    - name: Create tar
+      run: tar -cvf ./deploy.tar --exclude='*.map' ./captain-definition ./dist/
+
+    - name: Deploy
+      run: caprover deploy -h ${{ secrets.CAPROVER_SERVER_PROD }} -p ${{ secrets.CAPROVER_PASSWORD_PROD }} -a ${{ secrets.CAPROVER_APP_PROD }} -t ./deploy.tar
