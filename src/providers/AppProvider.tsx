@@ -1,5 +1,7 @@
+import { ApolloProvider } from '@apollo/client/react';
 import { uniq } from 'lodash';
 import React, { createContext, useReducer } from 'react';
+import client from '../apollo';
 
 type Action =
   | { type: 'toggleKeyword'; payload: string }
@@ -54,7 +56,11 @@ const AppProvider = ({ children }: AppProviderProps) => {
   const isSelected = (keyword: string) => state.selectedKeywords.includes(keyword);
 
   const value = { state, dispatch, selectKeyword, unselectKeyword, toggleKeyword, isSelected };
-  return <AppStateContext.Provider value={value}>{children}</AppStateContext.Provider>;
+  return (
+    <AppStateContext.Provider value={value}>
+      <ApolloProvider client={client}>{children}</ApolloProvider>
+    </AppStateContext.Provider>
+  );
 };
 
 const useApp = () => {

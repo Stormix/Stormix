@@ -1,18 +1,44 @@
- query Articles {
-    articles {
-      data {
-        attributes {
-          slug
-          title
-          category {
-            data {
-              attributes {
-                slug
-                name
-              }
+fragment RichText on ComponentSharedRichText {
+  body
+}
+
+query Articles {
+  articles {
+    data {
+      attributes {
+        slug
+        cover {
+          data {
+            attributes {
+              url
+              blurhash
+              width
+              height
+            }
+          }
+        }
+        title
+        description
+        publishedAt
+        blocks {
+          ...RichText
+        }
+        keywords {
+          data {
+            attributes {
+              name
+            }
+          }
+        }
+        category {
+          data {
+            attributes {
+              slug
+              name
             }
           }
         }
       }
     }
   }
+}

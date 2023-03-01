@@ -1,10 +1,11 @@
-/* eslint-disable */
-import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
+import { gql } from '@apollo/client';
+import * as Apollo from '@apollo/client';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+const defaultOptions = {} as const;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -14,11 +15,8 @@ export type Scalars = {
   Float: number;
   AboutBlocksDynamicZoneInput: any;
   ArticleBlocksDynamicZoneInput: any;
-  /** A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar. */
   DateTime: any;
-  /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
   JSON: any;
-  /** The `Upload` scalar type represents a file upload. */
   Upload: any;
 };
 
@@ -57,17 +55,18 @@ export type Article = {
   cover?: Maybe<UploadFileEntityResponse>;
   createdAt?: Maybe<Scalars['DateTime']>;
   description?: Maybe<Scalars['String']>;
+  keywords?: Maybe<KeywordRelationResponseCollection>;
   publishedAt?: Maybe<Scalars['DateTime']>;
-  seo?: Maybe<Array<Maybe<ComponentSharedSeo>>>;
   slug?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
   updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
 
-export type ArticleSeoArgs = {
-  filters?: InputMaybe<ComponentSharedSeoFiltersInput>;
+export type ArticleKeywordsArgs = {
+  filters?: InputMaybe<KeywordFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
+  publicationState?: InputMaybe<PublicationState>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
@@ -97,10 +96,10 @@ export type ArticleFiltersInput = {
   createdAt?: InputMaybe<DateTimeFilterInput>;
   description?: InputMaybe<StringFilterInput>;
   id?: InputMaybe<IdFilterInput>;
+  keywords?: InputMaybe<KeywordFiltersInput>;
   not?: InputMaybe<ArticleFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<ArticleFiltersInput>>>;
   publishedAt?: InputMaybe<DateTimeFilterInput>;
-  seo?: InputMaybe<ComponentSharedSeoFiltersInput>;
   sitemap_exclude?: InputMaybe<BooleanFilterInput>;
   slug?: InputMaybe<StringFilterInput>;
   title?: InputMaybe<StringFilterInput>;
@@ -113,8 +112,8 @@ export type ArticleInput = {
   category?: InputMaybe<Scalars['ID']>;
   cover?: InputMaybe<Scalars['ID']>;
   description?: InputMaybe<Scalars['String']>;
+  keywords?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
-  seo?: InputMaybe<Array<InputMaybe<ComponentSharedSeoInput>>>;
   sitemap_exclude?: InputMaybe<Scalars['Boolean']>;
   slug?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
@@ -289,14 +288,6 @@ export type ComponentSharedSeo = {
   shareImage?: Maybe<UploadFileEntityResponse>;
 };
 
-export type ComponentSharedSeoFiltersInput = {
-  and?: InputMaybe<Array<InputMaybe<ComponentSharedSeoFiltersInput>>>;
-  metaDescription?: InputMaybe<StringFilterInput>;
-  metaTitle?: InputMaybe<StringFilterInput>;
-  not?: InputMaybe<ComponentSharedSeoFiltersInput>;
-  or?: InputMaybe<Array<InputMaybe<ComponentSharedSeoFiltersInput>>>;
-};
-
 export type ComponentSharedSeoInput = {
   id?: InputMaybe<Scalars['ID']>;
   metaDescription?: InputMaybe<Scalars['String']>;
@@ -377,7 +368,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']>;
 };
 
-export type GenericMorph = About | Article | Author | Category | ComponentSharedMedia | ComponentSharedQuote | ComponentSharedRichText | ComponentSharedSeo | ComponentSharedSlider | Global | I18NLocale | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = About | Article | Author | Category | ComponentSharedMedia | ComponentSharedQuote | ComponentSharedRichText | ComponentSharedSeo | ComponentSharedSlider | Global | I18NLocale | Keyword | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type Global = {
   __typename?: 'Global';
@@ -516,6 +507,57 @@ export type JsonFilterInput = {
   startsWith?: InputMaybe<Scalars['JSON']>;
 };
 
+export type Keyword = {
+  __typename?: 'Keyword';
+  createdAt?: Maybe<Scalars['DateTime']>;
+  name?: Maybe<Scalars['String']>;
+  publishedAt?: Maybe<Scalars['DateTime']>;
+  slug?: Maybe<Scalars['String']>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type KeywordEntity = {
+  __typename?: 'KeywordEntity';
+  attributes?: Maybe<Keyword>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type KeywordEntityResponse = {
+  __typename?: 'KeywordEntityResponse';
+  data?: Maybe<KeywordEntity>;
+};
+
+export type KeywordEntityResponseCollection = {
+  __typename?: 'KeywordEntityResponseCollection';
+  data: Array<KeywordEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type KeywordFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<KeywordFiltersInput>>>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  name?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<KeywordFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<KeywordFiltersInput>>>;
+  publishedAt?: InputMaybe<DateTimeFilterInput>;
+  sitemap_exclude?: InputMaybe<BooleanFilterInput>;
+  slug?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type KeywordInput = {
+  name?: InputMaybe<Scalars['String']>;
+  publishedAt?: InputMaybe<Scalars['DateTime']>;
+  sitemap_exclude?: InputMaybe<Scalars['Boolean']>;
+  slug?: InputMaybe<Scalars['String']>;
+};
+
+export type KeywordRelationResponseCollection = {
+  __typename?: 'KeywordRelationResponseCollection';
+  data: Array<KeywordEntity>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   /** Change user password. Confirm with the current password. */
@@ -523,6 +565,7 @@ export type Mutation = {
   createArticle?: Maybe<ArticleEntityResponse>;
   createAuthor?: Maybe<AuthorEntityResponse>;
   createCategory?: Maybe<CategoryEntityResponse>;
+  createKeyword?: Maybe<KeywordEntityResponse>;
   createUploadFile?: Maybe<UploadFileEntityResponse>;
   createUploadFolder?: Maybe<UploadFolderEntityResponse>;
   /** Create a new role */
@@ -534,6 +577,7 @@ export type Mutation = {
   deleteAuthor?: Maybe<AuthorEntityResponse>;
   deleteCategory?: Maybe<CategoryEntityResponse>;
   deleteGlobal?: Maybe<GlobalEntityResponse>;
+  deleteKeyword?: Maybe<KeywordEntityResponse>;
   deleteUploadFile?: Maybe<UploadFileEntityResponse>;
   deleteUploadFolder?: Maybe<UploadFolderEntityResponse>;
   /** Delete an existing role */
@@ -557,6 +601,7 @@ export type Mutation = {
   updateCategory?: Maybe<CategoryEntityResponse>;
   updateFileInfo: UploadFileEntityResponse;
   updateGlobal?: Maybe<GlobalEntityResponse>;
+  updateKeyword?: Maybe<KeywordEntityResponse>;
   updateUploadFile?: Maybe<UploadFileEntityResponse>;
   updateUploadFolder?: Maybe<UploadFolderEntityResponse>;
   /** Update an existing role */
@@ -586,6 +631,11 @@ export type MutationCreateAuthorArgs = {
 
 export type MutationCreateCategoryArgs = {
   data: CategoryInput;
+};
+
+
+export type MutationCreateKeywordArgs = {
+  data: KeywordInput;
 };
 
 
@@ -620,6 +670,11 @@ export type MutationDeleteAuthorArgs = {
 
 
 export type MutationDeleteCategoryArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type MutationDeleteKeywordArgs = {
   id: Scalars['ID'];
 };
 
@@ -718,6 +773,12 @@ export type MutationUpdateGlobalArgs = {
 };
 
 
+export type MutationUpdateKeywordArgs = {
+  data: KeywordInput;
+  id: Scalars['ID'];
+};
+
+
 export type MutationUpdateUploadFileArgs = {
   data: UploadFileInput;
   id: Scalars['ID'];
@@ -782,6 +843,8 @@ export type Query = {
   global?: Maybe<GlobalEntityResponse>;
   i18NLocale?: Maybe<I18NLocaleEntityResponse>;
   i18NLocales?: Maybe<I18NLocaleEntityResponseCollection>;
+  keyword?: Maybe<KeywordEntityResponse>;
+  keywords?: Maybe<KeywordEntityResponseCollection>;
   me?: Maybe<UsersPermissionsMe>;
   uploadFile?: Maybe<UploadFileEntityResponse>;
   uploadFiles?: Maybe<UploadFileEntityResponseCollection>;
@@ -839,6 +902,19 @@ export type QueryI18NLocaleArgs = {
 export type QueryI18NLocalesArgs = {
   filters?: InputMaybe<I18NLocaleFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+export type QueryKeywordArgs = {
+  id?: InputMaybe<Scalars['ID']>;
+};
+
+
+export type QueryKeywordsArgs = {
+  filters?: InputMaybe<KeywordFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  publicationState?: InputMaybe<PublicationState>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
@@ -1301,10 +1377,84 @@ export type UsersPermissionsUserRelationResponseCollection = {
   data: Array<UsersPermissionsUserEntity>;
 };
 
+export type RichTextFragment = { __typename?: 'ComponentSharedRichText', body?: string | null };
+
 export type ArticlesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ArticlesQuery = { __typename?: 'Query', articles?: { __typename?: 'ArticleEntityResponseCollection', data: Array<{ __typename?: 'ArticleEntity', attributes?: { __typename?: 'Article', slug?: string | null, title?: string | null, category?: { __typename?: 'CategoryEntityResponse', data?: { __typename?: 'CategoryEntity', attributes?: { __typename?: 'Category', slug?: string | null, name?: string | null } | null } | null } | null } | null }> } | null };
+export type ArticlesQuery = { __typename?: 'Query', articles?: { __typename?: 'ArticleEntityResponseCollection', data: Array<{ __typename?: 'ArticleEntity', attributes?: { __typename?: 'Article', slug?: string | null, title?: string | null, description?: string | null, publishedAt?: any | null, cover?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', attributes?: { __typename?: 'UploadFile', url: string, blurhash?: string | null, width?: number | null, height?: number | null } | null } | null } | null, blocks?: Array<{ __typename?: 'ComponentSharedMedia' } | { __typename?: 'ComponentSharedQuote' } | { __typename?: 'ComponentSharedRichText', body?: string | null } | { __typename?: 'ComponentSharedSlider' } | { __typename?: 'Error' } | null> | null, keywords?: { __typename?: 'KeywordRelationResponseCollection', data: Array<{ __typename?: 'KeywordEntity', attributes?: { __typename?: 'Keyword', name?: string | null } | null }> } | null, category?: { __typename?: 'CategoryEntityResponse', data?: { __typename?: 'CategoryEntity', attributes?: { __typename?: 'Category', slug?: string | null, name?: string | null } | null } | null } | null } | null }> } | null };
 
+export const RichTextFragmentDoc = gql`
+    fragment RichText on ComponentSharedRichText {
+  body
+}
+    `;
+export const ArticlesDocument = gql`
+    query Articles {
+  articles {
+    data {
+      attributes {
+        slug
+        cover {
+          data {
+            attributes {
+              url
+              blurhash
+              width
+              height
+            }
+          }
+        }
+        title
+        description
+        publishedAt
+        blocks {
+          ...RichText
+        }
+        keywords {
+          data {
+            attributes {
+              name
+            }
+          }
+        }
+        category {
+          data {
+            attributes {
+              slug
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}
+    ${RichTextFragmentDoc}`;
 
-export const ArticlesDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Articles"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"articles"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"data"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"attributes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"category"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"data"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"attributes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"name"}}]}}]}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<ArticlesQuery, ArticlesQueryVariables>;
+/**
+ * __useArticlesQuery__
+ *
+ * To run a query within a React component, call `useArticlesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useArticlesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useArticlesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useArticlesQuery(baseOptions?: Apollo.QueryHookOptions<ArticlesQuery, ArticlesQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<ArticlesQuery, ArticlesQueryVariables>(ArticlesDocument, options);
+      }
+export function useArticlesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ArticlesQuery, ArticlesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<ArticlesQuery, ArticlesQueryVariables>(ArticlesDocument, options);
+        }
+export type ArticlesQueryHookResult = ReturnType<typeof useArticlesQuery>;
+export type ArticlesLazyQueryHookResult = ReturnType<typeof useArticlesLazyQuery>;
+export type ArticlesQueryResult = Apollo.QueryResult<ArticlesQuery, ArticlesQueryVariables>;
