@@ -26,32 +26,63 @@ const About: React.FC = () => {
         </p>
         <p>
           Fast-forward a few years, I became obsessed with web development, and started my journey as a freelance
-          software developer. Since then, I have been helping clients around the world bring their ideas to reality.
+          software developer. Since then, I&quot;ve been assisting clients all over the globe in making their concepts a
+          reality.
         </p>
         <p>
           I moved to France {since}, to pursue an engineering degree in both software engineering and robotics at{' '}
-          <span className="cursor-pointer text-primary">L&apos;École Centrale de Nantes</span>. During my time there, I
-          worked on a few projects, ranging from small CRUD apps to full fledged web applications. I also worked part
-          time as a freelance developer for the school&apos;s{' '}
-          <span className="cursor-pointer text-primary">Junior Enterprise</span>.
+          <a href="https://ec-nantes.fr" target="_blank" className="cursor-pointer text-primary" rel="noreferrer">
+            L&apos;École Centrale de Nantes
+          </a>
+          . During my time there, I worked on a few projects, ranging from small CRUD apps to full fledged web
+          applications. In addition, I worked part time as a freelance developer for the school&apos;s{' '}
+          <a
+            href="https://junior-entreprises.com/en/"
+            target="_blank"
+            className="cursor-pointer text-primary"
+            rel="noreferrer"
+          >
+            Junior Enterprise
+          </a>
+          .
         </p>
         <p>
-          During my internships and my last year, I started a full time job working as the lead developer for a belgian
-          startup known as <span className="cursor-pointer text-primary">Yogalive</span>. And in few months, we managed
-          to build a full class booking and video on demand platform, along with mobile apps for both iOS and Android. I
-          handled the entire development process, from the initial design implementation to the deployment of the final
-          product.
+          During my internships and my last year, I started a full-time job working as the lead developer for a Belgian
+          startup known as{' '}
+          <a
+            href="https://www.linkedin.com/company/yogalive-com/"
+            target="_blank"
+            className="cursor-pointer text-primary"
+            rel="noreferrer"
+          >
+            Yogalive
+          </a>
+          . And in few months, we managed to build a full class booking and video on demand platform, along with mobile
+          apps for both iOS and Android. I handled the entire development process, from the initial design
+          implementation to the deployment of the final product.
         </p>
         <p>
-          Unfortunately, towards the end of december 2021, <span className="cursor-pointer text-primary">Yogalive</span>{' '}
+          Unfortunately, towards the end of december 2021,{' '}
+          <a
+            href="https://www.linkedin.com/company/yogalive-com/"
+            target="_blank"
+            className="cursor-pointer text-primary"
+            rel="noreferrer"
+          >
+            Yogalive
+          </a>{' '}
           decided to shut down the company and I switched to a new job. I&apos;m currently working as a full stack
           software engineer for a company known as <span className="text-blue-800 cursor-pointer">Metamaze</span>, where
           I&apos;m part of the team in charge of maintaining and developing the company&apos;s{' '}
           <span className="" title="Automated document processing">
             ADP
           </span>{' '}
-          platform. I’m actively looking for new opportunities, preferably fulltime and remote, so if you have something
-          in mind, let’s <span className="cursor-pointer text-primary">.chat()</span>.
+          platform.
+        </p>
+        <p>
+          I thrive in dynamic environments and enjoy tackling complex challenges. As such, I am actively seeking new
+          opportunities, preferably full-time and remote. If you have something in mind, let&apos;s{' '}
+          <span className="cursor-pointer text-primary">.chat()</span> and discuss how I can add value to your team.
         </p>
 
         <p>I primarily use the following technologies, tools and libraries:</p>

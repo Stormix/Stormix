@@ -8,18 +8,7 @@ const WorkInProgress: React.FC = () => {
   const timestamp = format(new Date(Number(__COMMIT_TIMESTAMP__) * 1000), 'dd/MM/yyyy HH:mm:ss');
   return (
     <div className="flex flex-col gap-2 px-4 py-2 dark:bg-primary-dark-800 bg-primary-light-400 lg:flex-row lg:items-center">
-      <span>Still a work in progress. </span>
-      <span className="hidden lg:flex">Follow me on </span>
-      <a
-        title="Twitter profile"
-        target="_blank"
-        className="hidden text-primary lg:flex"
-        href="https://twitter.com/Stormix_co"
-        rel="noreferrer"
-      >
-        @Stormix_co
-      </a>
-      <span className="flex-grow hidden lg:flex">to stay updated...</span>
+      <span className="flex-grow">Still a work in progress. Still need to finish the copy writing.</span>
       <span className="hidden gap-2 lg:flex">
         Last commit{' '}
         <a

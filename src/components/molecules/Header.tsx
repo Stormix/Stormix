@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import LanguageSwitcher from '@/components/atoms/LanguageSwitcher';
 import { ReactComponent as Logo } from '@/assets/logo.svg';
 import { useTranslation } from 'react-i18next';
 import WorkInProgress from '@/components/atoms/WorkInProgress';
@@ -69,7 +68,7 @@ const Header: FC<{
         </div>
 
         <div className="flex flex-row items-center justify-end gap-4">
-          <LanguageSwitcher className="hidden lg:flex" />
+          {/* <LanguageSwitcher className="hidden lg:flex" /> */}
           <DarkModeSwitch />
         </div>
       </div>
