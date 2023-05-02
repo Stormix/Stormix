@@ -1,6 +1,6 @@
 # 👋 Hello World!
 
-I am a 24 year old, mostly self taught, software engineer, currently living in France. I'm passionate about sofware engineering, robotics, and everything in-between. I've worked with tools ranging from PHP / Laravel, JS/TS, Python, C++, Java :( and most web Frontend Technologies (Vue, React ...). I love to learn and contribute in any and every possible way.
+I am a Software engineer based in south of France. I'm passionate about sofware engineering, robotics, and everything in-between. I've worked with tools ranging from PHP / Laravel, JS/TS, Python, C++, Java :( and most web Frontend Technologies (Vue, React ...). I love to learn and contribute in any and every possible way.
 
 ## To know a little more about me...
 
@@ -10,7 +10,7 @@ I am a 24 year old, mostly self taught, software engineer, currently living in F
 
 - 📝 I regularly write articles on [https://blog.stormix.co/](https://blog.stormix.co/)
 
-- 💬 Ask me about **MERN / MEVN / TALL**
+- 💬 Ask me about **Typescript / Web security / Hybrid Apps**
 - 📫 How to reach me **hello@stormix.co**
 
 ### Connect with me
