@@ -1,6 +1,6 @@
 # 👋 Hello World!
 
-I am a Software engineer based in south of France. I'm passionate about sofware engineering, robotics, and everything in-between. I've worked with tools ranging from PHP / Laravel, JS/TS, Python, C++, Java :( and most web Frontend Technologies (Vue, React ...). I love to learn and contribute in any and every possible way.
+I am a software engineer based in south of France. I'm passionate about sofware engineering, robotics, and everything in-between. I've worked with tools ranging from PHP / Laravel, JS/TS, Python, C++, Java :( and most web Frontend Technologies (Vue, React ...). I love to learn and contribute in any and every possible way.
 
 ## To know a little more about me...
 
