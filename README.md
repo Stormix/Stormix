@@ -31,6 +31,8 @@ I am a software engineer based in south of France. I'm passionate about sofware 
 JSON         46 mins         █████▓░░░░░░░░░░░░░░░░░░░   22.97 %
 PHP          32 mins         ████░░░░░░░░░░░░░░░░░░░░░   16.05 %
 Other        32 mins         ████░░░░░░░░░░░░░░░░░░░░░   15.95 %
+TypeScript   27 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.42 %
+Markdown     23 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.50 %
 ```
 
 <!--END_SECTION:waka-->
