@@ -28,8 +28,7 @@ I am a software engineer based in south of France. I'm passionate about sofware 
 <!--START_SECTION:waka-->
 
 ```text
-YAML   6 mins          ███████████████████▒░░░░░   76.89 %
-Bash   1 min           █████▓░░░░░░░░░░░░░░░░░░░   23.11 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
