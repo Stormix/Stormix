@@ -1,16 +1,12 @@
 # 👋 Hello World!
 
-I am a software engineer based in south of France. I'm passionate about software engineering, robotics, and everything in-between. I've worked with tools ranging from PHP / Laravel, JS/TS, Python, C++, Java :( and most web Frontend Technologies (Vue, React ...). I love to learn and contribute in any and every possible way.
+I am a software engineer based in south of France. I'm passionate about software engineering, robotics, and everything in-betwee. I love to learn and contribute in any and every possible way.
 
 ## To know a little more about me...
 
 - 🌱 I’m currently learning **Rust**
-
-- 👨‍💻 All of my projects are available at [https://stormix.co/](https://stormix.co/)
-
-- 📝 I regularly write articles on [https://blog.stormix.co/](https://blog.stormix.co/)
-
-- 💬 Ask me about **Typescript / Web security / Hybrid Apps**
+- 👨‍💻 All of my projects are available at [repositories](https://github.com/Stormix?tab=repositories&type=source)
+- 💬 Ask me about **Typescript / React / Web security / Hybrid Apps**
 - 📫 How to reach me **hello@stormix.co**
 
 ### Connect with me
@@ -39,11 +35,9 @@ SQL   2 mins          ███████████████████�
 
 ## General github stats
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=stormix&theme=radical" alt="stormix" /></p>
+<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=stormix&theme=radical" alt="stormix" /></p>
+<p><img align="right" src="https://github-readme-stats.vercel.app/api/top-langs?username=stormix&show_icons=true&locale=en&layout=compact&theme=radical" alt="stormix" /></p>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=stormix&show_icons=true&locale=en&layout=compact&theme=radical" alt="stormix" /></p>
-
-<p>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=stormix&show_icons=true&locale=en&theme=radical" alt="stormix" /></p>
 
 
 <!-- ## Random [memes](https://github.com/Stormix/memes/)
