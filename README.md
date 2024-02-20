@@ -24,7 +24,9 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-No activity tracked
+Lua   3 mins          █████████████████████▓░░░   87.09 %
+INI   0 secs          ██▓░░░░░░░░░░░░░░░░░░░░░░   10.05 %
+SQL   0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.86 %
 ```
 
 <!--END_SECTION:waka-->
