@@ -24,8 +24,11 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-PHP   1 min           █████████████████████▒░░░   84.89 %
-SQL   0 secs          ███▓░░░░░░░░░░░░░░░░░░░░░   15.11 %
+TypeScript   5 mins          ████████████████▓░░░░░░░░   66.26 %
+PHP          1 min           ██████░░░░░░░░░░░░░░░░░░░   24.50 %
+SQL          0 secs          █░░░░░░░░░░░░░░░░░░░░░░░░   04.36 %
+Other        0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.29 %
+Git Config   0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.59 %
 ```
 
 <!--END_SECTION:waka-->
