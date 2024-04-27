@@ -24,10 +24,10 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-Lua        17 mins         ██████████████░░░░░░░░░░░   56.23 %
-Markdown   9 mins          ███████▓░░░░░░░░░░░░░░░░░   30.99 %
-Other      3 mins          ██▓░░░░░░░░░░░░░░░░░░░░░░   10.35 %
-Bash       0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.43 %
+Lua        15 mins         █████████████▒░░░░░░░░░░░   52.68 %
+Markdown   9 mins          ████████▒░░░░░░░░░░░░░░░░   33.50 %
+Other      3 mins          ██▓░░░░░░░░░░░░░░░░░░░░░░   11.19 %
+Bash       0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.63 %
 ```
 
 <!--END_SECTION:waka-->
