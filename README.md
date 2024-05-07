@@ -24,7 +24,7 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-TypeScript    1 hr 6 mins     ███████████████████████░░   91.60 %
+TypeScript    1 hr 6 mins     ███████████████████████░░   91.62 %
 Prisma        3 mins          █▒░░░░░░░░░░░░░░░░░░░░░░░   05.48 %
 Other         1 min           ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.18 %
 Bash          0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.61 %
