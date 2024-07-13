@@ -24,11 +24,11 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-YAML         5 hrs 9 mins    ████████████████████▓░░░░   82.36 %
-Other        31 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   08.28 %
-Docker       12 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.38 %
-Bash         11 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.94 %
-PowerShell   7 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.05 %
+YAML         5 hrs 9 mins    ███████████████████▒░░░░░   77.80 %
+Other        31 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.82 %
+Lua          21 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.45 %
+Docker       12 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.20 %
+Bash         11 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.77 %
 ```
 
 <!--END_SECTION:waka-->
