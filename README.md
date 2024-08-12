@@ -24,7 +24,11 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-No activity tracked
+TypeScript   2 hrs 3 mins    ███████████████████▒░░░░░   77.10 %
+JavaScript   13 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   08.34 %
+Prisma       6 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   04.17 %
+Other        4 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.90 %
+JSON         4 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.79 %
 ```
 
 <!--END_SECTION:waka-->
