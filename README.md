@@ -24,10 +24,11 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-Python       3 hrs 14 mins   ████████████████▒░░░░░░░░   65.87 %
-Other        1 hr 18 mins    ██████▓░░░░░░░░░░░░░░░░░░   26.70 %
-TypeScript   18 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.18 %
-TOML         3 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.25 %
+Python       3 hrs 52 mins   ████████████▓░░░░░░░░░░░░   51.12 %
+TypeScript   2 hrs 14 mins   ███████▒░░░░░░░░░░░░░░░░░   29.53 %
+Other        1 hr 18 mins    ████▒░░░░░░░░░░░░░░░░░░░░   17.30 %
+Bash         5 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.24 %
+TOML         3 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.81 %
 ```
 
 <!--END_SECTION:waka-->
