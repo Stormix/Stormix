@@ -25,7 +25,7 @@ I am a software engineer based in south of France. I'm passionate about software
 
 ```txt
 TypeScript   7 hrs 12 mins   ████████████████▒░░░░░░░░   65.14 %
-YAML         51 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.74 %
+YAML         51 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.73 %
 Bash         41 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.27 %
 JSON         37 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.62 %
 Prisma       29 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.43 %
