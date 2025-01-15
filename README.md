@@ -24,7 +24,10 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-No activity tracked
+Rust   17 mins         ██████████████████░░░░░░░   71.64 %
+JSON   4 mins          █████░░░░░░░░░░░░░░░░░░░░   19.96 %
+TOML   1 min           █▒░░░░░░░░░░░░░░░░░░░░░░░   05.32 %
+YAML   0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.08 %
 ```
 
 <!--END_SECTION:waka-->
