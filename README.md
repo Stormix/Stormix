@@ -33,13 +33,6 @@ JSON              1 min           ▒░░░░░░░░░░░░░░�
 
 <!--END_SECTION:waka-->
 
-## General github stats
-
-<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=stormix&theme=radical" alt="stormix" /></p>
-<p><img align="right" src="https://github-readme-stats.vercel.app/api/top-langs?username=stormix&show_icons=true&locale=en&layout=compact&theme=radical" alt="stormix" /></p>
-
-
-
 <!-- ## Random [memes](https://github.com/Stormix/memes/)
 
 <details>
