@@ -24,11 +24,11 @@ I am a software engineer based in south of France. I'm passionate about software
 <!--START_SECTION:waka-->
 
 ```txt
-TypeScript           16 hrs 1 min    █████████████████████▓░░░   87.05 %
-JSON                 49 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.48 %
-SQL                  19 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.80 %
-YAML                 17 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.60 %
-Docker               12 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.15 %
+TypeScript   11 hrs 46 mins  ██████████████████████░░░   87.50 %
+JSON         20 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.49 %
+SQL          19 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.37 %
+YAML         17 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.19 %
+Docker       12 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.57 %
 ```
 
 <!--END_SECTION:waka-->
